@@ -39,7 +39,9 @@
 
 
 ## 🧭 Github Strategy 
-- Main Branch로부터 각 Topic에 대한 branch를 내고 작업이 완료되면 해당 커밋들을 pull request를 통해 main Branch로 병합합니다. 
+- Main Branch로부터 각 Topic에 대한 branch를 내고 작업이 완료되면 해당 커밋들을 pull request를 통해 main Branch로 병합합니다.
+
+  
 ![image](https://github.com/FineAppleJuices/AppleJuice/assets/121593683/447eee07-efe6-4a86-9adf-eef90daf08f1)
 
 
