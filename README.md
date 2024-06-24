@@ -1,10 +1,46 @@
-# AppleJuice
+# 🍎 사과쥬스가 되고 싶어!!
+
+
+
+## 🧩 Team 
+<table style="width: 100%; table-layout: fixed;">
+  <tr>
+    <td style="text-align: center; padding: 10px;">
+      <h3>노랑</h3>
+    </td>
+    <td style="text-align: center; padding: 10px;">
+      <h3>벨</h3>
+    </td>
+    <td style="text-align: center; padding: 10px;">
+      <h3>파인</h3>
+    </td>
+    <td style="text-align: center; padding: 10px;">
+      <h3>해피</h3>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center; padding: 10px;">
+      <img src="https://github.com/FineAppleJuices/AppleJuice/assets/121593683/b2f481cf-e46e-4fde-9d4b-1a9328a02695" width="100" alt="Image 1">
+    </td>
+    <td style="text-align: center; padding: 10px;">
+      <img src="https://github.com/FineAppleJuices/AppleJuice/assets/121593683/8b3e6d09-7459-40ff-870f-44e668d51a1b" width="100" alt="Image 2">
+    </td>
+    <td style="text-align: center; padding: 10px;">
+      <img src= "https://github.com/FineAppleJuices/AppleJuice/assets/121593683/da57e123-6c7e-42f0-a89d-f71d3da206af" width="100" alt="Image 3">
+    </td>
+    <td style="text-align: center; padding: 10px;">
+      <img src="https://github.com/FineAppleJuices/AppleJuice/assets/121593683/9e0bc95c-6ce3-4412-8d89-bdb1259fff07" width="100" alt="Image 4">
+    </td>
+  </tr>
+</table>
 
 
 
 
 
-
+## 🧭 Github Strategy 
+- Main Branch로부터 각 Topic에 대한 branch를 내고 작업이 완료되면 해당 커밋들을 pull request를 통해 main Branch로 병합합니다. 
+![image](https://github.com/FineAppleJuices/AppleJuice/assets/121593683/447eee07-efe6-4a86-9adf-eef90daf08f1)
 
 
 
