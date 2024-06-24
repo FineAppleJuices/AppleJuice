@@ -20,7 +20,7 @@
   </tr>
   <tr>
     <td style="text-align: center; padding: 10px;">
-      <img src="https://github.com/FineAppleJuices/AppleJuice/assets/121593683/b2f481cf-e46e-4fde-9d4b-1a9328a02695" width="100" alt="Image 1">
+      <img src="https://github.com/FineAppleJuices/AppleJuice/assets/121593683/2d516a63-84df-4082-a2eb-de331ac21f4c" width="100" alt="Image 1">
     </td>
     <td style="text-align: center; padding: 10px;">
       <img src="https://github.com/FineAppleJuices/AppleJuice/assets/121593683/8b3e6d09-7459-40ff-870f-44e668d51a1b" width="100" alt="Image 2">
@@ -29,7 +29,7 @@
       <img src= "https://github.com/FineAppleJuices/AppleJuice/assets/121593683/da57e123-6c7e-42f0-a89d-f71d3da206af" width="100" alt="Image 3">
     </td>
     <td style="text-align: center; padding: 10px;">
-      <img src="https://github.com/FineAppleJuices/AppleJuice/assets/121593683/9e0bc95c-6ce3-4412-8d89-bdb1259fff07" width="100" alt="Image 4">
+      <img src="https://github.com/FineAppleJuices/AppleJuice/assets/121593683/b78111b5-185d-4161-898d-9ef037a87546" width="100" alt="Image 4">
     </td>
   </tr>
 </table>
