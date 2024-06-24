@@ -11,7 +11,36 @@
 		AFB1DB782C294FB8008A6A2D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DB772C294FB8008A6A2D /* ContentView.swift */; };
 		AFB1DB7A2C294FB9008A6A2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB1DB792C294FB9008A6A2D /* Assets.xcassets */; };
 		AFB1DB7D2C294FB9008A6A2D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB1DB7C2C294FB9008A6A2D /* Preview Assets.xcassets */; };
+		AFB1DB8A2C295987008A6A2D /* WatchAppleJuiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DB892C295987008A6A2D /* WatchAppleJuiceApp.swift */; };
+		AFB1DB8C2C295987008A6A2D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DB8B2C295987008A6A2D /* ContentView.swift */; };
+		AFB1DB8E2C295988008A6A2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB1DB8D2C295988008A6A2D /* Assets.xcassets */; };
+		AFB1DB912C295988008A6A2D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB1DB902C295988008A6A2D /* Preview Assets.xcassets */; };
+		AFB1DB942C295988008A6A2D /* WatchAppleJuice Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AFB1DB872C295987008A6A2D /* WatchAppleJuice Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AFB1DB922C295988008A6A2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFB1DB6A2C294FB8008A6A2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFB1DB862C295987008A6A2D;
+			remoteInfo = "WatchAppleJuice Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AFB1DB982C295988008A6A2D /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				AFB1DB942C295988008A6A2D /* WatchAppleJuice Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AFB1DB722C294FB8008A6A2D /* AppleJuice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleJuice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +48,22 @@
 		AFB1DB772C294FB8008A6A2D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AFB1DB792C294FB9008A6A2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFB1DB7C2C294FB9008A6A2D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AFB1DB872C295987008A6A2D /* WatchAppleJuice Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchAppleJuice Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFB1DB892C295987008A6A2D /* WatchAppleJuiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAppleJuiceApp.swift; sourceTree = "<group>"; };
+		AFB1DB8B2C295987008A6A2D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AFB1DB8D2C295988008A6A2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AFB1DB902C295988008A6A2D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AFB1DB6F2C294FB8008A6A2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFB1DB842C295987008A6A2D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				AFB1DB742C294FB8008A6A2D /* AppleJuice */,
+				AFB1DB882C295987008A6A2D /* WatchAppleJuice Watch App */,
 				AFB1DB732C294FB8008A6A2D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				AFB1DB722C294FB8008A6A2D /* AppleJuice.app */,
+				AFB1DB872C295987008A6A2D /* WatchAppleJuice Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +110,25 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		AFB1DB882C295987008A6A2D /* WatchAppleJuice Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				AFB1DB892C295987008A6A2D /* WatchAppleJuiceApp.swift */,
+				AFB1DB8B2C295987008A6A2D /* ContentView.swift */,
+				AFB1DB8D2C295988008A6A2D /* Assets.xcassets */,
+				AFB1DB8F2C295988008A6A2D /* Preview Content */,
+			);
+			path = "WatchAppleJuice Watch App";
+			sourceTree = "<group>";
+		};
+		AFB1DB8F2C295988008A6A2D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AFB1DB902C295988008A6A2D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,14 +139,33 @@
 				AFB1DB6E2C294FB8008A6A2D /* Sources */,
 				AFB1DB6F2C294FB8008A6A2D /* Frameworks */,
 				AFB1DB702C294FB8008A6A2D /* Resources */,
+				AFB1DB982C295988008A6A2D /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFB1DB932C295988008A6A2D /* PBXTargetDependency */,
+			);
+			name = AppleJuice;
+			productName = AppleJuice;
+			productReference = AFB1DB722C294FB8008A6A2D /* AppleJuice.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AFB1DB862C295987008A6A2D /* WatchAppleJuice Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFB1DB952C295988008A6A2D /* Build configuration list for PBXNativeTarget "WatchAppleJuice Watch App" */;
+			buildPhases = (
+				AFB1DB832C295987008A6A2D /* Sources */,
+				AFB1DB842C295987008A6A2D /* Frameworks */,
+				AFB1DB852C295987008A6A2D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = AppleJuice;
-			productName = AppleJuice;
-			productReference = AFB1DB722C294FB8008A6A2D /* AppleJuice.app */;
+			name = "WatchAppleJuice Watch App";
+			productName = "WatchAppleJuice Watch App";
+			productReference = AFB1DB872C295987008A6A2D /* WatchAppleJuice Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -98,6 +179,9 @@
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					AFB1DB712C294FB8008A6A2D = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					AFB1DB862C295987008A6A2D = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
@@ -116,6 +200,7 @@
 			projectRoot = "";
 			targets = (
 				AFB1DB712C294FB8008A6A2D /* AppleJuice */,
+				AFB1DB862C295987008A6A2D /* WatchAppleJuice Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +212,15 @@
 			files = (
 				AFB1DB7D2C294FB9008A6A2D /* Preview Assets.xcassets in Resources */,
 				AFB1DB7A2C294FB9008A6A2D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFB1DB852C295987008A6A2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFB1DB912C295988008A6A2D /* Preview Assets.xcassets in Resources */,
+				AFB1DB8E2C295988008A6A2D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +236,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AFB1DB832C295987008A6A2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFB1DB8C2C295987008A6A2D /* ContentView.swift in Sources */,
+				AFB1DB8A2C295987008A6A2D /* WatchAppleJuiceApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AFB1DB932C295988008A6A2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFB1DB862C295987008A6A2D /* WatchAppleJuice Watch App */;
+			targetProxy = AFB1DB922C295988008A6A2D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AFB1DB7E2C294FB9008A6A2D /* Debug */ = {
@@ -267,6 +378,7 @@
 		AFB1DB812C294FB9008A6A2D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -278,8 +390,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,15 +399,20 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = OneMoreThink.AppleJuice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		AFB1DB822C294FB9008A6A2D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -307,8 +424,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,9 +433,73 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = OneMoreThink.AppleJuice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		AFB1DB962C295988008A6A2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WatchAppleJuice Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = ZWTS2P7AH7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = WatchAppleJuice;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = OneMoreThink.AppleJuice;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = OneMoreThink.AppleJuice.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		AFB1DB972C295988008A6A2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WatchAppleJuice Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = ZWTS2P7AH7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = WatchAppleJuice;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = OneMoreThink.AppleJuice;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = OneMoreThink.AppleJuice.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
 			};
 			name = Release;
 		};
@@ -339,6 +520,15 @@
 			buildConfigurations = (
 				AFB1DB812C294FB9008A6A2D /* Debug */,
 				AFB1DB822C294FB9008A6A2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFB1DB952C295988008A6A2D /* Build configuration list for PBXNativeTarget "WatchAppleJuice Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFB1DB962C295988008A6A2D /* Debug */,
+				AFB1DB972C295988008A6A2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
