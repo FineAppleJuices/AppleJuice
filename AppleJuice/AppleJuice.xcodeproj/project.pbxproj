@@ -16,6 +16,8 @@
 		AFB1DB8E2C295988008A6A2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB1DB8D2C295988008A6A2D /* Assets.xcassets */; };
 		AFB1DB912C295988008A6A2D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB1DB902C295988008A6A2D /* Preview Assets.xcassets */; };
 		AFB1DB942C295988008A6A2D /* WatchAppleJuice Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AFB1DB872C295987008A6A2D /* WatchAppleJuice Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AFB1DBCA2C2EEA86008A6A2D /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBC92C2EEA86008A6A2D /* Character.swift */; };
+		AFB1DBCB2C2EEA86008A6A2D /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBC92C2EEA86008A6A2D /* Character.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,7 @@
 		AFB1DB8B2C295987008A6A2D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		AFB1DB8D2C295988008A6A2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFB1DB902C295988008A6A2D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AFB1DBC92C2EEA86008A6A2D /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,7 @@
 		AFB1DBC52C2EE54B008A6A2D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AFB1DBC92C2EEA86008A6A2D /* Character.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -263,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFB1DBCA2C2EEA86008A6A2D /* Character.swift in Sources */,
 				AFB1DB782C294FB8008A6A2D /* GoalHistoryView.swift in Sources */,
 				AFB1DB762C294FB8008A6A2D /* AppleJuiceApp.swift in Sources */,
 			);
@@ -272,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFB1DBCB2C2EEA86008A6A2D /* Character.swift in Sources */,
 				AFB1DB8C2C295987008A6A2D /* MainView.swift in Sources */,
 				AFB1DB8A2C295987008A6A2D /* WatchAppleJuiceApp.swift in Sources */,
 			);
