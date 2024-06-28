@@ -24,6 +24,11 @@
 		AFB1DBD12C2EF013008A6A2D /* MileStone.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBCF2C2EF013008A6A2D /* MileStone.swift */; };
 		AFB1DBD32C2EF44C008A6A2D /* DailyStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBD22C2EF44C008A6A2D /* DailyStatus.swift */; };
 		AFB1DBD42C2EF44C008A6A2D /* DailyStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBD22C2EF44C008A6A2D /* DailyStatus.swift */; };
+		AFB1DBD62C2EF810008A6A2D /* StepsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBD52C2EF810008A6A2D /* StepsManager.swift */; };
+		AFB1DBD72C2EF810008A6A2D /* StepsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBD52C2EF810008A6A2D /* StepsManager.swift */; };
+		AFB1DBDB2C2F0332008A6A2D /* InteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBDA2C2F0332008A6A2D /* InteractionView.swift */; };
+		AFB1DBDD2C2F0354008A6A2D /* CongratulationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBDC2C2F0354008A6A2D /* CongratulationsView.swift */; };
+		AFB1DBE02C2F03A6008A6A2D /* InteractionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBDF2C2F03A6008A6A2D /* InteractionType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +70,10 @@
 		AFB1DBCC2C2EEDA8008A6A2D /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		AFB1DBCF2C2EF013008A6A2D /* MileStone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MileStone.swift; sourceTree = "<group>"; };
 		AFB1DBD22C2EF44C008A6A2D /* DailyStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyStatus.swift; sourceTree = "<group>"; };
+		AFB1DBD52C2EF810008A6A2D /* StepsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsManager.swift; sourceTree = "<group>"; };
+		AFB1DBDA2C2F0332008A6A2D /* InteractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionView.swift; sourceTree = "<group>"; };
+		AFB1DBDC2C2F0354008A6A2D /* CongratulationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsView.swift; sourceTree = "<group>"; };
+		AFB1DBDF2C2F03A6008A6A2D /* InteractionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +120,6 @@
 				AFB1DBC62C2EE554008A6A2D /* ViewModel */,
 				AFB1DBC52C2EE54B008A6A2D /* Model */,
 				AFB1DB752C294FB8008A6A2D /* AppleJuiceApp.swift */,
-				AFB1DB772C294FB8008A6A2D /* GoalHistoryView.swift */,
 				AFB1DB792C294FB9008A6A2D /* Assets.xcassets */,
 				AFB1DB7B2C294FB9008A6A2D /* Preview Content */,
 			);
@@ -129,8 +137,9 @@
 		AFB1DB882C295987008A6A2D /* WatchAppleJuice Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				AFB1DBDE2C2F038B008A6A2D /* Model */,
+				AFB1DBD92C2EFF6D008A6A2D /* View */,
 				AFB1DB892C295987008A6A2D /* WatchAppleJuiceApp.swift */,
-				AFB1DB8B2C295987008A6A2D /* MainView.swift */,
 				AFB1DB8D2C295988008A6A2D /* Assets.xcassets */,
 				AFB1DB8F2C295988008A6A2D /* Preview Content */,
 			);
@@ -166,6 +175,7 @@
 		AFB1DBC72C2EE55F008A6A2D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AFB1DB772C294FB8008A6A2D /* GoalHistoryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,8 +183,27 @@
 		AFB1DBC82C2EE5F1008A6A2D /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				AFB1DBD52C2EF810008A6A2D /* StepsManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		AFB1DBD92C2EFF6D008A6A2D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AFB1DB8B2C295987008A6A2D /* MainView.swift */,
+				AFB1DBDA2C2F0332008A6A2D /* InteractionView.swift */,
+				AFB1DBDC2C2F0354008A6A2D /* CongratulationsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AFB1DBDE2C2F038B008A6A2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AFB1DBDF2C2F03A6008A6A2D /* InteractionType.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +314,7 @@
 				AFB1DB762C294FB8008A6A2D /* AppleJuiceApp.swift in Sources */,
 				AFB1DBD02C2EF013008A6A2D /* MileStone.swift in Sources */,
 				AFB1DBCD2C2EEDA8008A6A2D /* Character.swift in Sources */,
+				AFB1DBD62C2EF810008A6A2D /* StepsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,9 +325,13 @@
 				AFB1DBCB2C2EEA86008A6A2D /* CharacterType.swift in Sources */,
 				AFB1DBD42C2EF44C008A6A2D /* DailyStatus.swift in Sources */,
 				AFB1DB8C2C295987008A6A2D /* MainView.swift in Sources */,
+				AFB1DBDB2C2F0332008A6A2D /* InteractionView.swift in Sources */,
+				AFB1DBDD2C2F0354008A6A2D /* CongratulationsView.swift in Sources */,
 				AFB1DB8A2C295987008A6A2D /* WatchAppleJuiceApp.swift in Sources */,
+				AFB1DBE02C2F03A6008A6A2D /* InteractionType.swift in Sources */,
 				AFB1DBD12C2EF013008A6A2D /* MileStone.swift in Sources */,
 				AFB1DBCE2C2EEDA8008A6A2D /* Character.swift in Sources */,
+				AFB1DBD72C2EF810008A6A2D /* StepsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
