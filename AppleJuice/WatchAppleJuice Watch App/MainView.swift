@@ -1,13 +1,13 @@
 //
 //  ContentView.swift
-//  AppleJuice
+//  WatchAppleJuice Watch App
 //
 //  Created by 이종선 on 6/24/24.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -20,5 +20,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    MainView()
 }
