@@ -20,6 +20,8 @@
 		AFB1DBCB2C2EEA86008A6A2D /* CharacterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBC92C2EEA86008A6A2D /* CharacterType.swift */; };
 		AFB1DBCD2C2EEDA8008A6A2D /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBCC2C2EEDA8008A6A2D /* Character.swift */; };
 		AFB1DBCE2C2EEDA8008A6A2D /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBCC2C2EEDA8008A6A2D /* Character.swift */; };
+		AFB1DBD02C2EF013008A6A2D /* MileStone.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBCF2C2EF013008A6A2D /* MileStone.swift */; };
+		AFB1DBD12C2EF013008A6A2D /* MileStone.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBCF2C2EF013008A6A2D /* MileStone.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,7 @@
 		AFB1DB902C295988008A6A2D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AFB1DBC92C2EEA86008A6A2D /* CharacterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterType.swift; sourceTree = "<group>"; };
 		AFB1DBCC2C2EEDA8008A6A2D /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		AFB1DBCF2C2EF013008A6A2D /* MileStone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MileStone.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +147,7 @@
 			children = (
 				AFB1DBC92C2EEA86008A6A2D /* CharacterType.swift */,
 				AFB1DBCC2C2EEDA8008A6A2D /* Character.swift */,
+				AFB1DBCF2C2EF013008A6A2D /* MileStone.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -274,6 +278,7 @@
 				AFB1DBCA2C2EEA86008A6A2D /* CharacterType.swift in Sources */,
 				AFB1DB782C294FB8008A6A2D /* GoalHistoryView.swift in Sources */,
 				AFB1DB762C294FB8008A6A2D /* AppleJuiceApp.swift in Sources */,
+				AFB1DBD02C2EF013008A6A2D /* MileStone.swift in Sources */,
 				AFB1DBCD2C2EEDA8008A6A2D /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +290,7 @@
 				AFB1DBCB2C2EEA86008A6A2D /* CharacterType.swift in Sources */,
 				AFB1DB8C2C295987008A6A2D /* MainView.swift in Sources */,
 				AFB1DB8A2C295987008A6A2D /* WatchAppleJuiceApp.swift in Sources */,
+				AFB1DBD12C2EF013008A6A2D /* MileStone.swift in Sources */,
 				AFB1DBCE2C2EEDA8008A6A2D /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
