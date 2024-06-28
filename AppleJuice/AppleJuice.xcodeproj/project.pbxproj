@@ -22,6 +22,8 @@
 		AFB1DBCE2C2EEDA8008A6A2D /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBCC2C2EEDA8008A6A2D /* Character.swift */; };
 		AFB1DBD02C2EF013008A6A2D /* MileStone.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBCF2C2EF013008A6A2D /* MileStone.swift */; };
 		AFB1DBD12C2EF013008A6A2D /* MileStone.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBCF2C2EF013008A6A2D /* MileStone.swift */; };
+		AFB1DBD32C2EF44C008A6A2D /* DailyStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBD22C2EF44C008A6A2D /* DailyStatus.swift */; };
+		AFB1DBD42C2EF44C008A6A2D /* DailyStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBD22C2EF44C008A6A2D /* DailyStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,7 @@
 		AFB1DBC92C2EEA86008A6A2D /* CharacterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterType.swift; sourceTree = "<group>"; };
 		AFB1DBCC2C2EEDA8008A6A2D /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		AFB1DBCF2C2EF013008A6A2D /* MileStone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MileStone.swift; sourceTree = "<group>"; };
+		AFB1DBD22C2EF44C008A6A2D /* DailyStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +151,7 @@
 				AFB1DBC92C2EEA86008A6A2D /* CharacterType.swift */,
 				AFB1DBCC2C2EEDA8008A6A2D /* Character.swift */,
 				AFB1DBCF2C2EF013008A6A2D /* MileStone.swift */,
+				AFB1DBD22C2EF44C008A6A2D /* DailyStatus.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFB1DBCA2C2EEA86008A6A2D /* CharacterType.swift in Sources */,
+				AFB1DBD32C2EF44C008A6A2D /* DailyStatus.swift in Sources */,
 				AFB1DB782C294FB8008A6A2D /* GoalHistoryView.swift in Sources */,
 				AFB1DB762C294FB8008A6A2D /* AppleJuiceApp.swift in Sources */,
 				AFB1DBD02C2EF013008A6A2D /* MileStone.swift in Sources */,
@@ -288,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFB1DBCB2C2EEA86008A6A2D /* CharacterType.swift in Sources */,
+				AFB1DBD42C2EF44C008A6A2D /* DailyStatus.swift in Sources */,
 				AFB1DB8C2C295987008A6A2D /* MainView.swift in Sources */,
 				AFB1DB8A2C295987008A6A2D /* WatchAppleJuiceApp.swift in Sources */,
 				AFB1DBD12C2EF013008A6A2D /* MileStone.swift in Sources */,
