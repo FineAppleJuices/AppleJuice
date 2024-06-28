@@ -1,4 +1,5 @@
 # 🍎 사과쥬스가 되고 싶어!!
+사과랑 같이 놀고 걸으며 즐겁고 건강한 하루를 만들어봐요!!
 
 
 
@@ -34,16 +35,59 @@
   </tr>
 </table>
 
+---
+
+## 🧬 Low - Fi
+- 모든 기록은 하루 단위로 갱신됩니다. 
+
+### Watch 
+#### MainView
+- 선택한 캐릭터 + 에니메이션
+- 오른쪽 상단에 현재 걸음 수 표시
+- 아래쪽 세가지 버튼을 통해 캐릭터와의 상호작용
+<img src="https://github.com/FineAppleJuices/AppleJuice/assets/121593683/1a3fe90e-4dbe-422f-a27a-00a80a1a968a" width="200" height="200">
 
 
 
+#### InteractionView
+- MainView에서 상호작용 버튼을 누르면 화면 전환후 각 상호작용에 맞는 애니메이션 재생 
+<table>
+    <tr>
+        <th style="text-align: center;">Image 1 Description</th>
+        <th style="text-align: center;">Image 2 Description</th>
+        <th style="text-align: center;">Image 3 Description</th>
+    </tr>
+    <tr>
+        <td style="text-align: center;"><img src="https://github.com/FineAppleJuices/AppleJuice/assets/121593683/a5a996ca-8cc1-4bb4-a8e2-80b3f6f2cd5e" alt="Image 1" width="200" height="200"></td>
+        <td style="text-align: center;"><img src="https://github.com/FineAppleJuices/AppleJuice/assets/121593683/cf94424b-3ba2-4ab7-a2dc-dcca8d2b06b9" alt="Image 2" width="200" height="200"></td>
+        <td style="text-align: center;"><img src="https://github.com/FineAppleJuices/AppleJuice/assets/121593683/266f456e-f568-4670-a25a-043538f5c728" alt="Image 3" width="200" height="200"></td>
+    </tr>
+</table>
 
+
+#### GoalAchievedView
+- 각 마일스톤 (1000보, 2000보, 10000보)달성시 특정 오른쪽 상단에 버튼이 등장 추가 인터렉션 가능
+<img src="https://github.com/FineAppleJuices/AppleJuice/assets/121593683/dd33ea84-727f-4343-b380-08f25fb98601" width="200" height="200">
+
+
+#### CongratulationsView
+- 만보 달성시 버튼을 누르면 축하 애니메이션를 보여준다.
+- 이후 캐릭터의 모양이 변경 
+<img src="https://github.com/FineAppleJuices/AppleJuice/assets/121593683/ae5a4167-d4eb-4eb2-8915-e1c4f7e6d6c7" width="200" height="200">
+
+
+### iPhone
+
+#### GoalHistoryView
+<img src="https://github.com/FineAppleJuices/AppleJuice/assets/121593683/a3193bb1-48b0-4bc2-9d04-783833a67b18" width="200" height="350">
+
+
+---
 ## 🧭 Github Strategy 
 - Main Branch로부터 각 Topic에 대한 branch를 내고 작업이 완료되면 해당 커밋들을 pull request를 통해 main Branch로 병합합니다.
 
   
 ![image](https://github.com/FineAppleJuices/AppleJuice/assets/121593683/447eee07-efe6-4a86-9adf-eef90daf08f1)
-
 
 
 ## 🐈‍⬛ Github Convention
