@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct GoalHistoryView: View {
+    
+    @StateObject private var vm = GoalHistoryViewModel()
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
