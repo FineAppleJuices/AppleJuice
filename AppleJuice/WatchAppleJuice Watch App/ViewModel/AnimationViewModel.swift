@@ -11,9 +11,12 @@ import Combine
 class AnimationViewModel: ObservableObject {
     
     @Published var currentFrame: String
+    @Published var shouldNavigateBack: Bool = false
     private var timer: AnyCancellable?
     private let frameNames: [String]
     private var currentIndex = 0
+    private var elapsedTime: TimeInterval = 0
+    private let animationDuration: TimeInterval = 5.0
 
     init(frameNames: [String]) {
         self.frameNames = frameNames
@@ -22,19 +25,24 @@ class AnimationViewModel: ObservableObject {
     }
 
     private func startAnimation() {
-        timer = Timer.publish(every: 0.1, on: .main, in: .common)
+        timer = Timer.publish(every: 0.5, on: .main, in: .common)
             .autoconnect()
             .sink { [weak self] _ in
                 guard let self = self else { return }
-                
+                self.elapsedTime += 0.5
                 /// 프레임 index 결정 방법
                 /// 전체 frame개수가 3인 경우, 각 frame index [0, 1, 2]
                 ///  1 : (0 + 1) % 3 = 1 (currentIndex)
                 ///  2 : (1 + 1) % 3 = 2 (currentIndex)
                 ///  3 : (2 + 1) % 3 = 0 (currentIndex)
                 ///  4 : (0 + 1) % 3 = 1 (currentIndex)
-                self.currentIndex = (self.currentIndex + 1) % self.frameNames.count
-                self.currentFrame = self.frameNames[self.currentIndex]
+                if self.elapsedTime >= self.animationDuration {
+                    self.shouldNavigateBack = true
+                    self.timer?.cancel()
+                } else {
+                    self.currentIndex = (self.currentIndex + 1) % self.frameNames.count
+                    self.currentFrame = self.frameNames[self.currentIndex]
+                }
             }
     }
     

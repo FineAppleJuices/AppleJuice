@@ -10,31 +10,56 @@ import SwiftUI
 // Apple Watch Main View
 
 struct MainView: View {
+    
+    @State private var path = NavigationPath()
+    @StateObject private var vm = MainViewModel()
+    
     var body: some View {
-        VStack(spacing: 20) {
-            Image(systemName: "cat.fill")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            
-            Spacer()
-            
-            // 상호작용 버튼
-            HStack(spacing:12){
-                Button(action: {}, label: {
-                    Image(systemName: "shower.fill")
+        
+        NavigationStack(path: $path){
+            ZStack{
+                VStack(spacing: 20) {
+                    Image(systemName: "cat.fill")
                         .imageScale(.large)
-                })
-                Button(action: {}, label: {
-                    Image(systemName: "sun.max.fill")
-                        .imageScale(.large)
-                })
-                Button(action: {}, label: {
-                    Image(systemName: "wand.and.stars")
-                        .imageScale(.large)
-                })
+                        .foregroundStyle(.tint)
+                    
+                    Spacer()
+                    
+                    
+                    HStack(spacing: 12){
+                        ForEach(InteractionType.allCases){ type in
+                            Button(action: {
+                                path.append(type)
+                            }, label: {
+                                Image(systemName: type.iconImage)
+                                    .imageScale(.large)
+                            })
+                            
+                        }
+                    }
+                    
+                }
+            }
+            .navigationDestination(for: InteractionType.self) { type in
+                AnimationView(interactionType: type, path: $path)
+            }
+            .toolbar{
+                // 정해진 mileStone이 있는 경우에만 랜더링
+                if let milestone = vm.dailyStatus.mileStone {
+                    
+                    ToolbarItem(placement: .topBarTrailing){
+                        Button(action: {
+                            
+                        }, label: {
+                            Image(systemName: vm.dailyStatus.mileStone?.iconName ?? "carrot.fill")
+                        })
+                    }
+                }
+
             }
         }
-        .padding()
+
+        
     }
 }
 

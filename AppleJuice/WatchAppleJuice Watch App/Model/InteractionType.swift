@@ -14,6 +14,17 @@ enum InteractionType: Identifiable, CaseIterable {
     
     var id: Self {self}
     
+    var iconImage : String {
+        switch self {
+        case .shower:
+            "shower.fill"
+        case .tanning:
+            "sun.max.fill"
+        case .wipe:
+            "wand.and.stars"
+        }
+    }
+    
     var frameNames: [String] {
         switch self {
         case .shower:

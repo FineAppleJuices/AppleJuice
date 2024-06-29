@@ -33,4 +33,15 @@ enum MileStone : Int {
             return "오늘 하루도 고생많았어요👍"
         }
     }
+    
+    var iconName: String {
+        switch self {
+        case .oneThousand:
+            "carrot.fill"
+        case .fiveThousand:
+            "heart.fill"
+        case .tenThousand:
+            "crown.fill"
+        }
+    }
 }
