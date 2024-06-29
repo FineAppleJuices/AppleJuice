@@ -29,6 +29,7 @@
 		AFB1DBDB2C2F0332008A6A2D /* InteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBDA2C2F0332008A6A2D /* InteractionView.swift */; };
 		AFB1DBDD2C2F0354008A6A2D /* CongratulationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBDC2C2F0354008A6A2D /* CongratulationsView.swift */; };
 		AFB1DBE02C2F03A6008A6A2D /* InteractionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBDF2C2F03A6008A6A2D /* InteractionType.swift */; };
+		AFB1DBEB2C2FAB24008A6A2D /* AnimationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBEA2C2FAB24008A6A2D /* AnimationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		AFB1DBDA2C2F0332008A6A2D /* InteractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionView.swift; sourceTree = "<group>"; };
 		AFB1DBDC2C2F0354008A6A2D /* CongratulationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsView.swift; sourceTree = "<group>"; };
 		AFB1DBDF2C2F03A6008A6A2D /* InteractionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionType.swift; sourceTree = "<group>"; };
+		AFB1DBEA2C2FAB24008A6A2D /* AnimationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		AFB1DB882C295987008A6A2D /* WatchAppleJuice Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				AFB1DBE92C2FAB0F008A6A2D /* ViewModel */,
 				AFB1DBDE2C2F038B008A6A2D /* Model */,
 				AFB1DBD92C2EFF6D008A6A2D /* View */,
 				AFB1DB892C295987008A6A2D /* WatchAppleJuiceApp.swift */,
@@ -204,6 +207,14 @@
 				AFB1DBDF2C2F03A6008A6A2D /* InteractionType.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AFB1DBE92C2FAB0F008A6A2D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AFB1DBEA2C2FAB24008A6A2D /* AnimationViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +337,7 @@
 				AFB1DBD42C2EF44C008A6A2D /* DailyStatus.swift in Sources */,
 				AFB1DB8C2C295987008A6A2D /* MainView.swift in Sources */,
 				AFB1DBDB2C2F0332008A6A2D /* InteractionView.swift in Sources */,
+				AFB1DBEB2C2FAB24008A6A2D /* AnimationViewModel.swift in Sources */,
 				AFB1DBDD2C2F0354008A6A2D /* CongratulationsView.swift in Sources */,
 				AFB1DB8A2C295987008A6A2D /* WatchAppleJuiceApp.swift in Sources */,
 				AFB1DBE02C2F03A6008A6A2D /* InteractionType.swift in Sources */,
