@@ -31,6 +31,10 @@
 		AFB1DBE02C2F03A6008A6A2D /* InteractionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBDF2C2F03A6008A6A2D /* InteractionType.swift */; };
 		AFB1DBEB2C2FAB24008A6A2D /* AnimationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBEA2C2FAB24008A6A2D /* AnimationViewModel.swift */; };
 		AFB1DBED2C2FDAFC008A6A2D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBEC2C2FDAFC008A6A2D /* MainViewModel.swift */; };
+		AFB1DBF12C2FDEE2008A6A2D /* AppleJuice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBEF2C2FDEE1008A6A2D /* AppleJuice.xcdatamodeld */; };
+		AFB1DBF22C2FDEE2008A6A2D /* AppleJuice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBEF2C2FDEE1008A6A2D /* AppleJuice.xcdatamodeld */; };
+		AFB1DBF42C2FE019008A6A2D /* PersistentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBF32C2FE019008A6A2D /* PersistentController.swift */; };
+		AFB1DBF72C2FE0B3008A6A2D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBF62C2FE0B3008A6A2D /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,9 @@
 		AFB1DBDF2C2F03A6008A6A2D /* InteractionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionType.swift; sourceTree = "<group>"; };
 		AFB1DBEA2C2FAB24008A6A2D /* AnimationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewModel.swift; sourceTree = "<group>"; };
 		AFB1DBEC2C2FDAFC008A6A2D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		AFB1DBF02C2FDEE1008A6A2D /* AppleJuice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppleJuice.xcdatamodel; sourceTree = "<group>"; };
+		AFB1DBF32C2FE019008A6A2D /* PersistentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentController.swift; sourceTree = "<group>"; };
+		AFB1DBF62C2FE0B3008A6A2D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +126,7 @@
 		AFB1DB742C294FB8008A6A2D /* AppleJuice */ = {
 			isa = PBXGroup;
 			children = (
+				AFB1DBEE2C2FDE78008A6A2D /* CoreData */,
 				AFB1DBC82C2EE5F1008A6A2D /* Manager */,
 				AFB1DBC72C2EE55F008A6A2D /* View */,
 				AFB1DBC62C2EE554008A6A2D /* ViewModel */,
@@ -189,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				AFB1DBD52C2EF810008A6A2D /* StepsManager.swift */,
+				AFB1DBF62C2FE0B3008A6A2D /* CoreDataManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -218,6 +227,15 @@
 				AFB1DBEC2C2FDAFC008A6A2D /* MainViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AFB1DBEE2C2FDE78008A6A2D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				AFB1DBEF2C2FDEE1008A6A2D /* AppleJuice.xcdatamodeld */,
+				AFB1DBF32C2FE019008A6A2D /* PersistentController.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,11 +341,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFB1DBCA2C2EEA86008A6A2D /* CharacterType.swift in Sources */,
+				AFB1DBF42C2FE019008A6A2D /* PersistentController.swift in Sources */,
+				AFB1DBF12C2FDEE2008A6A2D /* AppleJuice.xcdatamodeld in Sources */,
 				AFB1DBD32C2EF44C008A6A2D /* DailyStatus.swift in Sources */,
 				AFB1DB782C294FB8008A6A2D /* GoalHistoryView.swift in Sources */,
 				AFB1DB762C294FB8008A6A2D /* AppleJuiceApp.swift in Sources */,
 				AFB1DBD02C2EF013008A6A2D /* MileStone.swift in Sources */,
 				AFB1DBCD2C2EEDA8008A6A2D /* Character.swift in Sources */,
+				AFB1DBF72C2FE0B3008A6A2D /* CoreDataManager.swift in Sources */,
 				AFB1DBD62C2EF810008A6A2D /* StepsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFB1DBF22C2FDEE2008A6A2D /* AppleJuice.xcdatamodeld in Sources */,
 				AFB1DBCB2C2EEA86008A6A2D /* CharacterType.swift in Sources */,
 				AFB1DBD42C2EF44C008A6A2D /* DailyStatus.swift in Sources */,
 				AFB1DB8C2C295987008A6A2D /* MainView.swift in Sources */,
@@ -640,6 +662,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AFB1DBEF2C2FDEE1008A6A2D /* AppleJuice.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AFB1DBF02C2FDEE1008A6A2D /* AppleJuice.xcdatamodel */,
+			);
+			currentVersion = AFB1DBF02C2FDEE1008A6A2D /* AppleJuice.xcdatamodel */;
+			name = AppleJuice.xcdatamodeld;
+			path = /Users/ijongseon/Project/AppleJuice/AppleJuice/AppleJuice/CoreData/AppleJuice.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AFB1DB6A2C294FB8008A6A2D /* Project object */;
 }
