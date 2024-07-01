@@ -134,6 +134,7 @@
 		AFB1DB742C294FB8008A6A2D /* AppleJuice */ = {
 			isa = PBXGroup;
 			children = (
+				AFB1DBEF2C2FDEE1008A6A2D /* AppleJuice.xcdatamodeld */,
 				AFB1DBEE2C2FDE78008A6A2D /* CoreData */,
 				AFB1DBC82C2EE5F1008A6A2D /* Manager */,
 				AFB1DBC72C2EE55F008A6A2D /* View */,
@@ -243,7 +244,6 @@
 		AFB1DBEE2C2FDE78008A6A2D /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				AFB1DBEF2C2FDEE1008A6A2D /* AppleJuice.xcdatamodeld */,
 				AFB1DBF32C2FE019008A6A2D /* PersistentController.swift */,
 			);
 			path = CoreData;
@@ -687,7 +687,7 @@
 			);
 			currentVersion = AFB1DBF02C2FDEE1008A6A2D /* AppleJuice.xcdatamodel */;
 			name = AppleJuice.xcdatamodeld;
-			path = /Users/ijongseon/Project/AppleJuice/AppleJuice/AppleJuice/CoreData/AppleJuice.xcdatamodeld;
+			path = CoreData/AppleJuice.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
