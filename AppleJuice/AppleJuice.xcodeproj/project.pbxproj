@@ -8,14 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		AFB1DB762C294FB8008A6A2D /* AppleJuiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DB752C294FB8008A6A2D /* AppleJuiceApp.swift */; };
-		AFB1DB782C294FB8008A6A2D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DB772C294FB8008A6A2D /* ContentView.swift */; };
+		AFB1DB782C294FB8008A6A2D /* GoalHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DB772C294FB8008A6A2D /* GoalHistoryView.swift */; };
 		AFB1DB7A2C294FB9008A6A2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB1DB792C294FB9008A6A2D /* Assets.xcassets */; };
 		AFB1DB7D2C294FB9008A6A2D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB1DB7C2C294FB9008A6A2D /* Preview Assets.xcassets */; };
 		AFB1DB8A2C295987008A6A2D /* WatchAppleJuiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DB892C295987008A6A2D /* WatchAppleJuiceApp.swift */; };
-		AFB1DB8C2C295987008A6A2D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DB8B2C295987008A6A2D /* ContentView.swift */; };
+		AFB1DB8C2C295987008A6A2D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DB8B2C295987008A6A2D /* MainView.swift */; };
 		AFB1DB8E2C295988008A6A2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB1DB8D2C295988008A6A2D /* Assets.xcassets */; };
 		AFB1DB912C295988008A6A2D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB1DB902C295988008A6A2D /* Preview Assets.xcassets */; };
 		AFB1DB942C295988008A6A2D /* WatchAppleJuice Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AFB1DB872C295987008A6A2D /* WatchAppleJuice Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AFB1DBCA2C2EEA86008A6A2D /* CharacterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBC92C2EEA86008A6A2D /* CharacterType.swift */; };
+		AFB1DBCB2C2EEA86008A6A2D /* CharacterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBC92C2EEA86008A6A2D /* CharacterType.swift */; };
+		AFB1DBCD2C2EEDA8008A6A2D /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBCC2C2EEDA8008A6A2D /* Character.swift */; };
+		AFB1DBCE2C2EEDA8008A6A2D /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBCC2C2EEDA8008A6A2D /* Character.swift */; };
+		AFB1DBD02C2EF013008A6A2D /* MileStone.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBCF2C2EF013008A6A2D /* MileStone.swift */; };
+		AFB1DBD12C2EF013008A6A2D /* MileStone.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBCF2C2EF013008A6A2D /* MileStone.swift */; };
+		AFB1DBD32C2EF44C008A6A2D /* DailyStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBD22C2EF44C008A6A2D /* DailyStatus.swift */; };
+		AFB1DBD42C2EF44C008A6A2D /* DailyStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBD22C2EF44C008A6A2D /* DailyStatus.swift */; };
+		AFB1DBD62C2EF810008A6A2D /* StepsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBD52C2EF810008A6A2D /* StepsManager.swift */; };
+		AFB1DBD72C2EF810008A6A2D /* StepsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBD52C2EF810008A6A2D /* StepsManager.swift */; };
+		AFB1DBDB2C2F0332008A6A2D /* InteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBDA2C2F0332008A6A2D /* InteractionView.swift */; };
+		AFB1DBDD2C2F0354008A6A2D /* CongratulationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBDC2C2F0354008A6A2D /* CongratulationsView.swift */; };
+		AFB1DBE02C2F03A6008A6A2D /* InteractionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBDF2C2F03A6008A6A2D /* InteractionType.swift */; };
+		AFB1DBEB2C2FAB24008A6A2D /* AnimationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBEA2C2FAB24008A6A2D /* AnimationViewModel.swift */; };
+		AFB1DBED2C2FDAFC008A6A2D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBEC2C2FDAFC008A6A2D /* MainViewModel.swift */; };
+		AFB1DBF12C2FDEE2008A6A2D /* AppleJuice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBEF2C2FDEE1008A6A2D /* AppleJuice.xcdatamodeld */; };
+		AFB1DBF22C2FDEE2008A6A2D /* AppleJuice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBEF2C2FDEE1008A6A2D /* AppleJuice.xcdatamodeld */; };
+		AFB1DBF42C2FE019008A6A2D /* PersistentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBF32C2FE019008A6A2D /* PersistentController.swift */; };
+		AFB1DBF72C2FE0B3008A6A2D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBF62C2FE0B3008A6A2D /* CoreDataManager.swift */; };
+		AFB1DBFD2C2FE876008A6A2D /* GoalHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBFC2C2FE876008A6A2D /* GoalHistoryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +65,28 @@
 /* Begin PBXFileReference section */
 		AFB1DB722C294FB8008A6A2D /* AppleJuice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleJuice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB1DB752C294FB8008A6A2D /* AppleJuiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleJuiceApp.swift; sourceTree = "<group>"; };
-		AFB1DB772C294FB8008A6A2D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AFB1DB772C294FB8008A6A2D /* GoalHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalHistoryView.swift; sourceTree = "<group>"; };
 		AFB1DB792C294FB9008A6A2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFB1DB7C2C294FB9008A6A2D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AFB1DB872C295987008A6A2D /* WatchAppleJuice Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchAppleJuice Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB1DB892C295987008A6A2D /* WatchAppleJuiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAppleJuiceApp.swift; sourceTree = "<group>"; };
-		AFB1DB8B2C295987008A6A2D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AFB1DB8B2C295987008A6A2D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		AFB1DB8D2C295988008A6A2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFB1DB902C295988008A6A2D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AFB1DBC92C2EEA86008A6A2D /* CharacterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterType.swift; sourceTree = "<group>"; };
+		AFB1DBCC2C2EEDA8008A6A2D /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		AFB1DBCF2C2EF013008A6A2D /* MileStone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MileStone.swift; sourceTree = "<group>"; };
+		AFB1DBD22C2EF44C008A6A2D /* DailyStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyStatus.swift; sourceTree = "<group>"; };
+		AFB1DBD52C2EF810008A6A2D /* StepsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsManager.swift; sourceTree = "<group>"; };
+		AFB1DBDA2C2F0332008A6A2D /* InteractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionView.swift; sourceTree = "<group>"; };
+		AFB1DBDC2C2F0354008A6A2D /* CongratulationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsView.swift; sourceTree = "<group>"; };
+		AFB1DBDF2C2F03A6008A6A2D /* InteractionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionType.swift; sourceTree = "<group>"; };
+		AFB1DBEA2C2FAB24008A6A2D /* AnimationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewModel.swift; sourceTree = "<group>"; };
+		AFB1DBEC2C2FDAFC008A6A2D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		AFB1DBF02C2FDEE1008A6A2D /* AppleJuice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppleJuice.xcdatamodel; sourceTree = "<group>"; };
+		AFB1DBF32C2FE019008A6A2D /* PersistentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentController.swift; sourceTree = "<group>"; };
+		AFB1DBF62C2FE0B3008A6A2D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		AFB1DBFC2C2FE876008A6A2D /* GoalHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalHistoryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +128,12 @@
 		AFB1DB742C294FB8008A6A2D /* AppleJuice */ = {
 			isa = PBXGroup;
 			children = (
+				AFB1DBEE2C2FDE78008A6A2D /* CoreData */,
+				AFB1DBC82C2EE5F1008A6A2D /* Manager */,
+				AFB1DBC72C2EE55F008A6A2D /* View */,
+				AFB1DBC62C2EE554008A6A2D /* ViewModel */,
+				AFB1DBC52C2EE54B008A6A2D /* Model */,
 				AFB1DB752C294FB8008A6A2D /* AppleJuiceApp.swift */,
-				AFB1DB772C294FB8008A6A2D /* ContentView.swift */,
 				AFB1DB792C294FB9008A6A2D /* Assets.xcassets */,
 				AFB1DB7B2C294FB9008A6A2D /* Preview Content */,
 			);
@@ -113,8 +151,10 @@
 		AFB1DB882C295987008A6A2D /* WatchAppleJuice Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				AFB1DBE92C2FAB0F008A6A2D /* ViewModel */,
+				AFB1DBDE2C2F038B008A6A2D /* Model */,
+				AFB1DBD92C2EFF6D008A6A2D /* View */,
 				AFB1DB892C295987008A6A2D /* WatchAppleJuiceApp.swift */,
-				AFB1DB8B2C295987008A6A2D /* ContentView.swift */,
 				AFB1DB8D2C295988008A6A2D /* Assets.xcassets */,
 				AFB1DB8F2C295988008A6A2D /* Preview Content */,
 			);
@@ -127,6 +167,78 @@
 				AFB1DB902C295988008A6A2D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AFB1DBC52C2EE54B008A6A2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AFB1DBC92C2EEA86008A6A2D /* CharacterType.swift */,
+				AFB1DBCC2C2EEDA8008A6A2D /* Character.swift */,
+				AFB1DBCF2C2EF013008A6A2D /* MileStone.swift */,
+				AFB1DBD22C2EF44C008A6A2D /* DailyStatus.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AFB1DBC62C2EE554008A6A2D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AFB1DBFC2C2FE876008A6A2D /* GoalHistoryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AFB1DBC72C2EE55F008A6A2D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AFB1DB772C294FB8008A6A2D /* GoalHistoryView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AFB1DBC82C2EE5F1008A6A2D /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				AFB1DBD52C2EF810008A6A2D /* StepsManager.swift */,
+				AFB1DBF62C2FE0B3008A6A2D /* CoreDataManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		AFB1DBD92C2EFF6D008A6A2D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AFB1DB8B2C295987008A6A2D /* MainView.swift */,
+				AFB1DBDA2C2F0332008A6A2D /* InteractionView.swift */,
+				AFB1DBDC2C2F0354008A6A2D /* CongratulationsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AFB1DBDE2C2F038B008A6A2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AFB1DBDF2C2F03A6008A6A2D /* InteractionType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AFB1DBE92C2FAB0F008A6A2D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AFB1DBEA2C2FAB24008A6A2D /* AnimationViewModel.swift */,
+				AFB1DBEC2C2FDAFC008A6A2D /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AFB1DBEE2C2FDE78008A6A2D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				AFB1DBEF2C2FDEE1008A6A2D /* AppleJuice.xcdatamodeld */,
+				AFB1DBF32C2FE019008A6A2D /* PersistentController.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +343,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFB1DB782C294FB8008A6A2D /* ContentView.swift in Sources */,
+				AFB1DBCA2C2EEA86008A6A2D /* CharacterType.swift in Sources */,
+				AFB1DBF42C2FE019008A6A2D /* PersistentController.swift in Sources */,
+				AFB1DBFD2C2FE876008A6A2D /* GoalHistoryViewModel.swift in Sources */,
+				AFB1DBF12C2FDEE2008A6A2D /* AppleJuice.xcdatamodeld in Sources */,
+				AFB1DBD32C2EF44C008A6A2D /* DailyStatus.swift in Sources */,
+				AFB1DB782C294FB8008A6A2D /* GoalHistoryView.swift in Sources */,
 				AFB1DB762C294FB8008A6A2D /* AppleJuiceApp.swift in Sources */,
+				AFB1DBD02C2EF013008A6A2D /* MileStone.swift in Sources */,
+				AFB1DBCD2C2EEDA8008A6A2D /* Character.swift in Sources */,
+				AFB1DBF72C2FE0B3008A6A2D /* CoreDataManager.swift in Sources */,
+				AFB1DBD62C2EF810008A6A2D /* StepsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,8 +361,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFB1DB8C2C295987008A6A2D /* ContentView.swift in Sources */,
+				AFB1DBF22C2FDEE2008A6A2D /* AppleJuice.xcdatamodeld in Sources */,
+				AFB1DBCB2C2EEA86008A6A2D /* CharacterType.swift in Sources */,
+				AFB1DBD42C2EF44C008A6A2D /* DailyStatus.swift in Sources */,
+				AFB1DB8C2C295987008A6A2D /* MainView.swift in Sources */,
+				AFB1DBDB2C2F0332008A6A2D /* InteractionView.swift in Sources */,
+				AFB1DBEB2C2FAB24008A6A2D /* AnimationViewModel.swift in Sources */,
+				AFB1DBDD2C2F0354008A6A2D /* CongratulationsView.swift in Sources */,
 				AFB1DB8A2C295987008A6A2D /* WatchAppleJuiceApp.swift in Sources */,
+				AFB1DBE02C2F03A6008A6A2D /* InteractionType.swift in Sources */,
+				AFB1DBD12C2EF013008A6A2D /* MileStone.swift in Sources */,
+				AFB1DBCE2C2EEDA8008A6A2D /* Character.swift in Sources */,
+				AFB1DBD72C2EF810008A6A2D /* StepsManager.swift in Sources */,
+				AFB1DBED2C2FDAFC008A6A2D /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +666,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AFB1DBEF2C2FDEE1008A6A2D /* AppleJuice.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AFB1DBF02C2FDEE1008A6A2D /* AppleJuice.xcdatamodel */,
+			);
+			currentVersion = AFB1DBF02C2FDEE1008A6A2D /* AppleJuice.xcdatamodel */;
+			name = AppleJuice.xcdatamodeld;
+			path = /Users/ijongseon/Project/AppleJuice/AppleJuice/AppleJuice/CoreData/AppleJuice.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AFB1DB6A2C294FB8008A6A2D /* Project object */;
 }

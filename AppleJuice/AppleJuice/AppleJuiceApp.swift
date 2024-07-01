@@ -11,7 +11,7 @@ import SwiftUI
 struct AppleJuiceApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GoalHistoryView()
         }
     }
 }
