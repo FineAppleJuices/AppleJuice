@@ -16,7 +16,39 @@ struct GoalHistoryView: View {
             Image("mainSky")
                 .resizable()
                 .ignoresSafeArea()
-            Text("Hello, world!")
+            Image("fridge")
+                .resizable()
+                .ignoresSafeArea()
+            VStack{
+                Text("주스 냉장고")
+                    .foregroundColor(.white)
+                    .padding(30)
+                    .font(Font.custom("Galmuri7", size: 48))
+                Spacer()
+            }
+            VStack{
+                Spacer()
+                Image("bar")
+                    .resizable()
+                    .frame(width: 300, height: 10)
+                    .padding(40)
+                Image("bar")
+                    .resizable()
+                    .frame(width: 300, height: 10)
+                    .padding(40)
+                Image("bar")
+                    .resizable()
+                    .frame(width: 300, height: 10)
+                    .padding(40)
+                Image("bar")
+                    .resizable()
+                    .frame(width: 300, height: 10)
+                    .padding(40)
+                Image("bar")
+                    .resizable()
+                    .frame(width: 300, height: 10)
+                    .padding(40)
+            }
         }
     }
 }

@@ -40,6 +40,8 @@
 		AFB1DC2C2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DC2A2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataProperties.swift */; };
 		AFB1DC2D2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DC292C32E6AD008A6A2D /* DailyStatusEntity+CoreDataClass.swift */; };
 		AFB1DC2E2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DC2A2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataProperties.swift */; };
+		D3E50B6F2C3BD9890039A1DC /* Galmuri7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3E50B6E2C3BD9890039A1DC /* Galmuri7.ttf */; };
+		D3E50B702C3BD9890039A1DC /* Galmuri7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3E50B6E2C3BD9890039A1DC /* Galmuri7.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		AFB1DBFC2C2FE876008A6A2D /* GoalHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalHistoryViewModel.swift; sourceTree = "<group>"; };
 		AFB1DC292C32E6AD008A6A2D /* DailyStatusEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyStatusEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AFB1DC2A2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyStatusEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D3E50B6E2C3BD9890039A1DC /* Galmuri7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Galmuri7.ttf; sourceTree = "<group>"; };
+		D3E50B712C3BDB230039A1DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,7 @@
 		AFB1DB742C294FB8008A6A2D /* AppleJuice */ = {
 			isa = PBXGroup;
 			children = (
+				D3E50B712C3BDB230039A1DC /* Info.plist */,
 				AFB1DBEF2C2FDEE1008A6A2D /* AppleJuice.xcdatamodeld */,
 				AFB1DBEE2C2FDE78008A6A2D /* CoreData */,
 				AFB1DBC82C2EE5F1008A6A2D /* Manager */,
@@ -142,6 +147,7 @@
 				AFB1DBC52C2EE54B008A6A2D /* Model */,
 				AFB1DB752C294FB8008A6A2D /* AppleJuiceApp.swift */,
 				AFB1DB792C294FB9008A6A2D /* Assets.xcassets */,
+				D3E50B6E2C3BD9890039A1DC /* Galmuri7.ttf */,
 				AFB1DB7B2C294FB9008A6A2D /* Preview Content */,
 			);
 			path = AppleJuice;
@@ -330,6 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3E50B6F2C3BD9890039A1DC /* Galmuri7.ttf in Resources */,
 				AFB1DB7D2C294FB9008A6A2D /* Preview Assets.xcassets in Resources */,
 				AFB1DB7A2C294FB9008A6A2D /* Assets.xcassets in Resources */,
 			);
@@ -339,6 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3E50B702C3BD9890039A1DC /* Galmuri7.ttf in Resources */,
 				AFB1DB912C295988008A6A2D /* Preview Assets.xcassets in Resources */,
 				AFB1DB8E2C295988008A6A2D /* Assets.xcassets in Resources */,
 			);
@@ -528,9 +536,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppleJuice/Preview Content\"";
-				DEVELOPMENT_TEAM = ZWTS2P7AH7;
+				DEVELOPMENT_TEAM = F293KMT2AW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppleJuice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -562,9 +571,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppleJuice/Preview Content\"";
-				DEVELOPMENT_TEAM = ZWTS2P7AH7;
+				DEVELOPMENT_TEAM = F293KMT2AW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppleJuice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -595,7 +605,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchAppleJuice Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = ZWTS2P7AH7;
+				DEVELOPMENT_TEAM = F293KMT2AW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = WatchAppleJuice;
@@ -625,7 +635,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchAppleJuice Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = ZWTS2P7AH7;
+				DEVELOPMENT_TEAM = F293KMT2AW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = WatchAppleJuice;
