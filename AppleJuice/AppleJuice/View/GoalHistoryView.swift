@@ -12,13 +12,12 @@ struct GoalHistoryView: View {
     @StateObject private var vm = GoalHistoryViewModel()
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
+        ZStack {
+            Image("mainSky")
+                .resizable()
+                .ignoresSafeArea()
             Text("Hello, world!")
         }
-        .padding()
     }
 }
 
