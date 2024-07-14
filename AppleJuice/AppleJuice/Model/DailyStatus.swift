@@ -35,10 +35,6 @@ struct DailyStatus : Identifiable {
     
     static func from(entity: DailyStatusEntity) -> Self {
         
-        if entity.isAcheive {
-            
-        }
-        
         return DailyStatus(id: entity.id ?? "", date: entity.createdAt ?? .now, character: Character(type: .apple), steps: Int(entity.steps), mileStone: entity.isAcheive ? .tenThousand  : nil)
     }
 }
