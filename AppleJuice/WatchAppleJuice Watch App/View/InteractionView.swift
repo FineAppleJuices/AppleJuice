@@ -19,11 +19,11 @@ struct AnimationView : View {
     
     var body : some View {
         
-        VStack {
+        VStack(spacing: 0) {
             Image(vm.currentFrame)
                 .resizable()
-                .scaledToFit()
-                .frame(width: 100, height: 100)
+                .frame(width: 162, height: 204)
+                .padding(.bottom, 10)
                 .animation(.easeInOut(duration: 0.1), value: vm.currentFrame)
         }
         .onChange(of: vm.shouldNavigateBack) { oldValue, newValue in

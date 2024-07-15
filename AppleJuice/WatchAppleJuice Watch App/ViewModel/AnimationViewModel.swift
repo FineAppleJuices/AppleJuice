@@ -18,10 +18,14 @@ class AnimationViewModel: ObservableObject {
     private var elapsedTime: TimeInterval = 0
     private let animationDuration: TimeInterval = 5.0
 
-    init(frameNames: [String]) {
+    init(frameNames: [String], infinite: Bool = false) {
         self.frameNames = frameNames
         self.currentFrame = frameNames.first ?? ""
-        startAnimation()
+        if infinite {
+            startInfiniteAnimation()
+        } else {
+            startAnimation()
+        }
     }
 
     private func startAnimation() {
@@ -45,6 +49,16 @@ class AnimationViewModel: ObservableObject {
                 }
             }
     }
+    
+    private func startInfiniteAnimation() {
+           timer = Timer.publish(every: 1, on: .main, in: .common)
+               .autoconnect()
+               .sink { [weak self] _ in
+                   guard let self = self else { return }
+                   self.currentIndex = (self.currentIndex + 1) % self.frameNames.count
+                   self.currentFrame = self.frameNames[self.currentIndex]
+               }
+       }
     
     deinit {
         timer?.cancel()

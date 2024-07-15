@@ -35,7 +35,7 @@ enum CharacterType: String, Identifiable, CaseIterable {
     var animationImages: [String] {
         switch self {
         case .apple:
-            ["apple.1", "apple.2", "apple.3"]
+            ["red1", "red2", "red3"]
         case .pineapple:
             ["pineapple.1", "pineapple.2", "pineapple.3"]
         }
