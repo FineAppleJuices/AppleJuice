@@ -10,13 +10,14 @@ import SwiftUI
 struct GoalHistoryView: View {
     
     @StateObject private var vm = GoalHistoryViewModel()
+    @StateObject private var cp = ConnectivityProvider()
     
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("\(cp.receivedMessage.description)")
         }
         .padding()
     }
