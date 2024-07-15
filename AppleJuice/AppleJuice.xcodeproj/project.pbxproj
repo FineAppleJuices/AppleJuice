@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF72152F2C44CE80007763C6 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF72152E2C44CE80007763C6 /* WatchConnectivity.framework */; };
+		AF7215312C44CE89007763C6 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7215302C44CE89007763C6 /* WatchConnectivity.framework */; };
 		AFB1DB762C294FB8008A6A2D /* AppleJuiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DB752C294FB8008A6A2D /* AppleJuiceApp.swift */; };
 		AFB1DB782C294FB8008A6A2D /* GoalHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DB772C294FB8008A6A2D /* GoalHistoryView.swift */; };
 		AFB1DB7A2C294FB9008A6A2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB1DB792C294FB9008A6A2D /* Assets.xcassets */; };
@@ -67,6 +69,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AF72152E2C44CE80007763C6 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS10.5.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
+		AF7215302C44CE89007763C6 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		AFB1DB722C294FB8008A6A2D /* AppleJuice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleJuice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB1DB752C294FB8008A6A2D /* AppleJuiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleJuiceApp.swift; sourceTree = "<group>"; };
 		AFB1DB772C294FB8008A6A2D /* GoalHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalHistoryView.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF7215312C44CE89007763C6 /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,18 +112,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF72152F2C44CE80007763C6 /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF72152D2C44CE7F007763C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF7215302C44CE89007763C6 /* WatchConnectivity.framework */,
+				AF72152E2C44CE80007763C6 /* WatchConnectivity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AFB1DB692C294FB8008A6A2D = {
 			isa = PBXGroup;
 			children = (
 				AFB1DB742C294FB8008A6A2D /* AppleJuice */,
 				AFB1DB882C295987008A6A2D /* WatchAppleJuice Watch App */,
 				AFB1DB732C294FB8008A6A2D /* Products */,
+				AF72152D2C44CE7F007763C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
