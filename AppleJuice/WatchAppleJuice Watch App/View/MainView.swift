@@ -45,16 +45,15 @@ struct MainView: View {
             }
             .toolbar{
                 // 정해진 mileStone이 있는 경우에만 랜더링
-                if let milestone = vm.dailyStatus.mileStone {
                     
                     ToolbarItem(placement: .topBarTrailing){
                         Button(action: {
                             
                         }, label: {
-                            Image(systemName: vm.dailyStatus.mileStone?.iconName ?? "carrot.fill")
+                            Image(systemName: "carrot.fill")
                         })
                     }
-                }
+                
 
             }
         }
