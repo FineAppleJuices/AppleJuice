@@ -16,9 +16,7 @@ struct GoalHistoryView: View {
             Image("mainSky")
                 .resizable()
                 .ignoresSafeArea()
-            Image("fridge")
-                .resizable()
-                .ignoresSafeArea()
+
             VStack{
                 Text("주스 냉장고")
                     .foregroundColor(.white)
@@ -26,12 +24,24 @@ struct GoalHistoryView: View {
                     .font(Font.custom("Galmuri7", size: 48))
                 Spacer()
             }
+            Image("fridge")
+                .resizable()
+                .ignoresSafeArea()
             VStack{
                 Spacer()
-                Image("bar")
-                    .resizable()
-                    .frame(width: 300, height: 10)
-                    .padding(40)
+                VStack{
+                    HStack{
+                        Image("juice")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 30)
+                    }
+                        Image("bar")
+                            .resizable()
+                            .frame(width: 300, height: 10)
+                            .padding(40)
+                    
+                }
                 Image("bar")
                     .resizable()
                     .frame(width: 300, height: 10)
