@@ -22,7 +22,6 @@ class CoreDataManager {
         entity.id = status.id
         entity.steps = Int16(status.steps)
         entity.createdAt = status.date
-        entity.isAcheive = status.isAchieve
 
         do{
             try mainContext.save()

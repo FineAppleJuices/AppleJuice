@@ -10,8 +10,10 @@ import SwiftUI
 struct GoalHistoryView: View {
     
     @StateObject private var vm = GoalHistoryViewModel()
+    @StateObject private var cp = ConnectivityProvider()
     
     var body: some View {
+<<<<<<< HEAD
         ZStack {
             Image("mainSky")
                 .resizable()
@@ -59,6 +61,13 @@ struct GoalHistoryView: View {
                     .frame(width: 300, height: 10)
                     .padding(40)
             }
+=======
+        VStack {
+            Image(systemName: "globe")
+                .imageScale(.large)
+                .foregroundStyle(.tint)
+            Text("\(cp.receivedMessage.description)")
+>>>>>>> feat/#13-connect-watch
         }
     }
 }
