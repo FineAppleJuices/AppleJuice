@@ -107,6 +107,7 @@
 		AFB1DC2A2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyStatusEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D3E50B6E2C3BD9890039A1DC /* Galmuri7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Galmuri7.ttf; sourceTree = "<group>"; };
 		D3E50B712C3BDB230039A1DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D3FFBBE12C4D35DE0042EAAD /* AppleJuice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppleJuice.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +161,7 @@
 		AFB1DB742C294FB8008A6A2D /* AppleJuice */ = {
 			isa = PBXGroup;
 			children = (
+				D3FFBBE12C4D35DE0042EAAD /* AppleJuice.entitlements */,
 				D3E50B712C3BDB230039A1DC /* Info.plist */,
 				AFB1DBEF2C2FDEE1008A6A2D /* AppleJuice.xcdatamodeld */,
 				AFB1DBEE2C2FDE78008A6A2D /* CoreData */,
@@ -561,6 +563,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AppleJuice/AppleJuice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppleJuice/Preview Content\"";
@@ -568,6 +571,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppleJuice/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "앱이 사용자의 걸음 수를 읽기 위해 접근이 필요합니다.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "건강 데이터를 Health 앱에 기록하기 위해 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -596,6 +601,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AppleJuice/AppleJuice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppleJuice/Preview Content\"";
@@ -603,6 +609,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppleJuice/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "앱이 사용자의 걸음 수를 읽기 위해 접근이 필요합니다.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "건강 데이터를 Health 앱에 기록하기 위해 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -637,6 +645,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = WatchAppleJuice;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "앱이 사용자의 걸음 수를 읽기 위해 접근이 필요합니다.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "건강 데이터를 Health 앱에 기록하기 위해 필요합니다.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = OneMoreThink.AppleJuice;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -667,6 +677,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = WatchAppleJuice;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "앱이 사용자의 걸음 수를 읽기 위해 접근이 필요합니다.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "건강 데이터를 Health 앱에 기록하기 위해 필요합니다.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = OneMoreThink.AppleJuice;
 				LD_RUNPATH_SEARCH_PATHS = (
