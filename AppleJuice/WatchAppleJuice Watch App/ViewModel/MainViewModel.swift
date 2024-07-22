@@ -9,11 +9,5 @@ import Foundation
 
 class MainViewModel: ObservableObject {
     
-    @Published var dailyStatus: DailyStatus
-    
-    init() {
-        self.dailyStatus = DailyStatus()
-    }
-    
-    
+
 }

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF72152F2C44CE80007763C6 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF72152E2C44CE80007763C6 /* WatchConnectivity.framework */; };
+		AF7215312C44CE89007763C6 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7215302C44CE89007763C6 /* WatchConnectivity.framework */; };
+		AF7215332C44CF09007763C6 /* ConnectivityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7215322C44CF09007763C6 /* ConnectivityProvider.swift */; };
+		AF7215352C44D022007763C6 /* ConnectivityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7215342C44D022007763C6 /* ConnectivityProvider.swift */; };
+		AF7215372C44D433007763C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7215362C44D433007763C6 /* AppDelegate.swift */; };
 		AFB1DB762C294FB8008A6A2D /* AppleJuiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DB752C294FB8008A6A2D /* AppleJuiceApp.swift */; };
 		AFB1DB782C294FB8008A6A2D /* GoalHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DB772C294FB8008A6A2D /* GoalHistoryView.swift */; };
 		AFB1DB7A2C294FB9008A6A2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB1DB792C294FB9008A6A2D /* Assets.xcassets */; };
@@ -67,6 +72,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AF72152E2C44CE80007763C6 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS10.5.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
+		AF7215302C44CE89007763C6 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		AF7215322C44CF09007763C6 /* ConnectivityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityProvider.swift; sourceTree = "<group>"; };
+		AF7215342C44D022007763C6 /* ConnectivityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityProvider.swift; sourceTree = "<group>"; };
+		AF7215362C44D433007763C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFB1DB722C294FB8008A6A2D /* AppleJuice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleJuice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB1DB752C294FB8008A6A2D /* AppleJuiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleJuiceApp.swift; sourceTree = "<group>"; };
 		AFB1DB772C294FB8008A6A2D /* GoalHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalHistoryView.swift; sourceTree = "<group>"; };
@@ -100,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF7215312C44CE89007763C6 /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,18 +118,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF72152F2C44CE80007763C6 /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF72152D2C44CE7F007763C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF7215302C44CE89007763C6 /* WatchConnectivity.framework */,
+				AF72152E2C44CE80007763C6 /* WatchConnectivity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AFB1DB692C294FB8008A6A2D = {
 			isa = PBXGroup;
 			children = (
 				AFB1DB742C294FB8008A6A2D /* AppleJuice */,
 				AFB1DB882C295987008A6A2D /* WatchAppleJuice Watch App */,
 				AFB1DB732C294FB8008A6A2D /* Products */,
+				AF72152D2C44CE7F007763C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +163,7 @@
 				AFB1DBC62C2EE554008A6A2D /* ViewModel */,
 				AFB1DBC52C2EE54B008A6A2D /* Model */,
 				AFB1DB752C294FB8008A6A2D /* AppleJuiceApp.swift */,
+				AF7215362C44D433007763C6 /* AppDelegate.swift */,
 				AFB1DB792C294FB9008A6A2D /* Assets.xcassets */,
 				AFB1DB7B2C294FB9008A6A2D /* Preview Content */,
 			);
@@ -210,6 +233,7 @@
 			children = (
 				AFB1DBD52C2EF810008A6A2D /* StepsManager.swift */,
 				AFB1DBF62C2FE0B3008A6A2D /* CoreDataManager.swift */,
+				AF7215322C44CF09007763C6 /* ConnectivityProvider.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -237,6 +261,7 @@
 			children = (
 				AFB1DBEA2C2FAB24008A6A2D /* AnimationViewModel.swift */,
 				AFB1DBEC2C2FDAFC008A6A2D /* MainViewModel.swift */,
+				AF7215342C44D022007763C6 /* ConnectivityProvider.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -354,12 +379,14 @@
 				AFB1DC2B2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataClass.swift in Sources */,
 				AFB1DC2C2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataProperties.swift in Sources */,
 				AFB1DBCA2C2EEA86008A6A2D /* CharacterType.swift in Sources */,
+				AF7215372C44D433007763C6 /* AppDelegate.swift in Sources */,
 				AFB1DBF42C2FE019008A6A2D /* PersistentController.swift in Sources */,
 				AFB1DBFD2C2FE876008A6A2D /* GoalHistoryViewModel.swift in Sources */,
 				AFB1DBF12C2FDEE2008A6A2D /* AppleJuice.xcdatamodeld in Sources */,
 				AFB1DBD32C2EF44C008A6A2D /* DailyStatus.swift in Sources */,
 				AFB1DB782C294FB8008A6A2D /* GoalHistoryView.swift in Sources */,
 				AFB1DB762C294FB8008A6A2D /* AppleJuiceApp.swift in Sources */,
+				AF7215332C44CF09007763C6 /* ConnectivityProvider.swift in Sources */,
 				AFB1DBD02C2EF013008A6A2D /* MileStone.swift in Sources */,
 				AFB1DBCD2C2EEDA8008A6A2D /* Character.swift in Sources */,
 				AFB1DBF72C2FE0B3008A6A2D /* CoreDataManager.swift in Sources */,
@@ -386,6 +413,7 @@
 				AFB1DBCE2C2EEDA8008A6A2D /* Character.swift in Sources */,
 				AFB1DBD72C2EF810008A6A2D /* StepsManager.swift in Sources */,
 				AFB1DBED2C2FDAFC008A6A2D /* MainViewModel.swift in Sources */,
+				AF7215352C44D022007763C6 /* ConnectivityProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
