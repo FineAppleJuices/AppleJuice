@@ -32,7 +32,6 @@
 		AFB1DBD62C2EF810008A6A2D /* StepsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBD52C2EF810008A6A2D /* StepsManager.swift */; };
 		AFB1DBD72C2EF810008A6A2D /* StepsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBD52C2EF810008A6A2D /* StepsManager.swift */; };
 		AFB1DBDB2C2F0332008A6A2D /* InteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBDA2C2F0332008A6A2D /* InteractionView.swift */; };
-		AFB1DBDD2C2F0354008A6A2D /* CongratulationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBDC2C2F0354008A6A2D /* CongratulationsView.swift */; };
 		AFB1DBE02C2F03A6008A6A2D /* InteractionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBDF2C2F03A6008A6A2D /* InteractionType.swift */; };
 		AFB1DBEB2C2FAB24008A6A2D /* AnimationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBEA2C2FAB24008A6A2D /* AnimationViewModel.swift */; };
 		AFB1DBED2C2FDAFC008A6A2D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBEC2C2FDAFC008A6A2D /* MainViewModel.swift */; };
@@ -93,7 +92,6 @@
 		AFB1DBD22C2EF44C008A6A2D /* DailyStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyStatus.swift; sourceTree = "<group>"; };
 		AFB1DBD52C2EF810008A6A2D /* StepsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsManager.swift; sourceTree = "<group>"; };
 		AFB1DBDA2C2F0332008A6A2D /* InteractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionView.swift; sourceTree = "<group>"; };
-		AFB1DBDC2C2F0354008A6A2D /* CongratulationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsView.swift; sourceTree = "<group>"; };
 		AFB1DBDF2C2F03A6008A6A2D /* InteractionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionType.swift; sourceTree = "<group>"; };
 		AFB1DBEA2C2FAB24008A6A2D /* AnimationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewModel.swift; sourceTree = "<group>"; };
 		AFB1DBEC2C2FDAFC008A6A2D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -103,6 +101,8 @@
 		AFB1DBFC2C2FE876008A6A2D /* GoalHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalHistoryViewModel.swift; sourceTree = "<group>"; };
 		AFB1DC292C32E6AD008A6A2D /* DailyStatusEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyStatusEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AFB1DC2A2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyStatusEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EE008C782C4E759E009933CA /* WatchAppleJuice Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchAppleJuice Watch App.entitlements"; sourceTree = "<group>"; };
+		EE008C792C4E75AA009933CA /* AppleJuice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppleJuice.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +156,7 @@
 		AFB1DB742C294FB8008A6A2D /* AppleJuice */ = {
 			isa = PBXGroup;
 			children = (
+				EE008C792C4E75AA009933CA /* AppleJuice.entitlements */,
 				AFB1DBEF2C2FDEE1008A6A2D /* AppleJuice.xcdatamodeld */,
 				AFB1DBEE2C2FDE78008A6A2D /* CoreData */,
 				AFB1DBC82C2EE5F1008A6A2D /* Manager */,
@@ -181,6 +182,8 @@
 		AFB1DB882C295987008A6A2D /* WatchAppleJuice Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				EE008C7A2C4E85E3009933CA /* Manager */,
+				EE008C782C4E759E009933CA /* WatchAppleJuice Watch App.entitlements */,
 				AFB1DBE92C2FAB0F008A6A2D /* ViewModel */,
 				AFB1DBDE2C2F038B008A6A2D /* Model */,
 				AFB1DBD92C2EFF6D008A6A2D /* View */,
@@ -231,7 +234,6 @@
 		AFB1DBC82C2EE5F1008A6A2D /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				AFB1DBD52C2EF810008A6A2D /* StepsManager.swift */,
 				AFB1DBF62C2FE0B3008A6A2D /* CoreDataManager.swift */,
 				AF7215322C44CF09007763C6 /* ConnectivityProvider.swift */,
 			);
@@ -243,7 +245,6 @@
 			children = (
 				AFB1DB8B2C295987008A6A2D /* MainView.swift */,
 				AFB1DBDA2C2F0332008A6A2D /* InteractionView.swift */,
-				AFB1DBDC2C2F0354008A6A2D /* CongratulationsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -272,6 +273,14 @@
 				AFB1DBF32C2FE019008A6A2D /* PersistentController.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		EE008C7A2C4E85E3009933CA /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				AFB1DBD52C2EF810008A6A2D /* StepsManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,7 +415,6 @@
 				AFB1DC2E2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataProperties.swift in Sources */,
 				AFB1DBDB2C2F0332008A6A2D /* InteractionView.swift in Sources */,
 				AFB1DBEB2C2FAB24008A6A2D /* AnimationViewModel.swift in Sources */,
-				AFB1DBDD2C2F0354008A6A2D /* CongratulationsView.swift in Sources */,
 				AFB1DB8A2C295987008A6A2D /* WatchAppleJuiceApp.swift in Sources */,
 				AFB1DBE02C2F03A6008A6A2D /* InteractionType.swift in Sources */,
 				AFB1DBD12C2EF013008A6A2D /* MileStone.swift in Sources */,
@@ -553,12 +561,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AppleJuice/AppleJuice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppleJuice/Preview Content\"";
-				DEVELOPMENT_TEAM = ZWTS2P7AH7;
+				DEVELOPMENT_TEAM = 6KQJH558XZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "\"Health Records Usage Description\"";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "\"Health Share Usage Description\"";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "\"Health Update Usage Description\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -587,12 +599,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AppleJuice/AppleJuice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppleJuice/Preview Content\"";
-				DEVELOPMENT_TEAM = ZWTS2P7AH7;
+				DEVELOPMENT_TEAM = 6KQJH558XZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "\"Health Records Usage Description\"";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "\"Health Share Usage Description\"";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "\"Health Update Usage Description\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -620,13 +636,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "WatchAppleJuice Watch App/WatchAppleJuice Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchAppleJuice Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = ZWTS2P7AH7;
+				DEVELOPMENT_TEAM = 6KQJH558XZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = WatchAppleJuice;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "\"Health Records Usage Description\"";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "\"Health Share Usage Description\"";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "\"Health Update Usage Description\"";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = OneMoreThink.AppleJuice;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -650,13 +670,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "WatchAppleJuice Watch App/WatchAppleJuice Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchAppleJuice Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = ZWTS2P7AH7;
+				DEVELOPMENT_TEAM = 6KQJH558XZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = WatchAppleJuice;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "\"Health Records Usage Description\"";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "\"Health Share Usage Description\"";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "\"Health Update Usage Description\"";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = OneMoreThink.AppleJuice;
 				LD_RUNPATH_SEARCH_PATHS = (

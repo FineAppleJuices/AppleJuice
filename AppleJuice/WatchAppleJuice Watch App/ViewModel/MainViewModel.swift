@@ -8,6 +8,11 @@
 import Foundation
 
 class MainViewModel: ObservableObject {
+    @Published var stepCount = 0
+    private var stepsManager = StepsManager()
     
-
+    init() {
+        self.stepCount = stepsManager.stepCount
+    }
+        
 }
