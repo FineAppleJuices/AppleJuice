@@ -10,7 +10,7 @@ import HealthKit
 class StepsManager: ObservableObject {
     @Published var stepCount: Int = 0
 
-    private var healthStore: HKHealthStore?
+    private var healthStore: HKHealthStore
     private var query: HKObserverQuery?
 
     init() {
@@ -19,7 +19,7 @@ class StepsManager: ObservableObject {
     }
 
     func requestAuthorization() {
-        guard let healthStore = healthStore else { return }
+//        guard let healthStore = healthStore else { return }
 
         let stepType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
         let typesToShare: Set = [stepType]
@@ -35,7 +35,7 @@ class StepsManager: ObservableObject {
     }
 
     func startStepCountQuery() {
-        guard let healthStore = healthStore else { return }
+//        guard let healthStore = healthStore else { return }
 
         let stepType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
         query = HKObserverQuery(sampleType: stepType, predicate: nil) { [weak self] query, completionHandler, error in
@@ -50,7 +50,7 @@ class StepsManager: ObservableObject {
     }
 
     func fetchStepCount() {
-        guard let healthStore = healthStore else { return }
+//        guard let healthStore = healthStore else { return }
 
         let stepType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
 
