@@ -77,7 +77,17 @@ struct MainView: View {
                     
                     ToolbarItem(placement: .topBarTrailing){
                         Button(action: {
-                            cp.sendMessage(message: [ "key" : true])
+                            //cp.sendMessage(message: [ "key" : true])
+                            
+                            //날짜 설정
+                            let currentDate = Date()
+                            let dateFormatter = DateFormatter()
+                            dateFormatter.dateFormat = "yyyy-MM-dd"
+                            let formattedDate = dateFormatter.string(from: currentDate)
+
+                            print(formattedDate)
+                            cp.sendMessage(message: [ "date" : formattedDate])
+                            
                         }, label: {
                             Image(systemName: "carrot.fill")
                         })
