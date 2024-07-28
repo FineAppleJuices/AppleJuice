@@ -44,6 +44,7 @@
 		AFB1DC2C2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DC2A2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataProperties.swift */; };
 		AFB1DC2D2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DC292C32E6AD008A6A2D /* DailyStatusEntity+CoreDataClass.swift */; };
 		AFB1DC2E2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DC2A2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataProperties.swift */; };
+		EEEC6BC12C567799006E4246 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEC6BC02C567799006E4246 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		AFB1DC2A2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyStatusEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		EE008C782C4E759E009933CA /* WatchAppleJuice Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchAppleJuice Watch App.entitlements"; sourceTree = "<group>"; };
 		EE008C792C4E75AA009933CA /* AppleJuice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppleJuice.entitlements; sourceTree = "<group>"; };
+		EEEC6BC02C567799006E4246 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 		AFB1DB882C295987008A6A2D /* WatchAppleJuice Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				EEEC6BBF2C56778B006E4246 /* Tools */,
 				EE008C7A2C4E85E3009933CA /* Manager */,
 				EE008C782C4E759E009933CA /* WatchAppleJuice Watch App.entitlements */,
 				AFB1DBE92C2FAB0F008A6A2D /* ViewModel */,
@@ -281,6 +284,14 @@
 				AFB1DBD52C2EF810008A6A2D /* StepsManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		EEEC6BBF2C56778B006E4246 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				EEEC6BC02C567799006E4246 /* Extensions.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,6 +429,7 @@
 				AFB1DB8A2C295987008A6A2D /* WatchAppleJuiceApp.swift in Sources */,
 				AFB1DBE02C2F03A6008A6A2D /* InteractionType.swift in Sources */,
 				AFB1DBD12C2EF013008A6A2D /* MileStone.swift in Sources */,
+				EEEC6BC12C567799006E4246 /* Extensions.swift in Sources */,
 				AFB1DBCE2C2EEDA8008A6A2D /* Character.swift in Sources */,
 				AFB1DBD72C2EF810008A6A2D /* StepsManager.swift in Sources */,
 				AFB1DBED2C2FDAFC008A6A2D /* MainViewModel.swift in Sources */,

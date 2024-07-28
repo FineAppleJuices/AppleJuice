@@ -81,12 +81,7 @@ struct MainView: View {
                             
                             //날짜 설정
                             let currentDate = Date()
-                            let dateFormatter = DateFormatter()
-                            dateFormatter.dateFormat = "yyyy-MM-dd"
-                            let formattedDate = dateFormatter.string(from: currentDate)
-
-                            print(formattedDate)
-                            cp.sendMessage(message: [ "date" : formattedDate])
+                            cp.sendMessage(message: [ "date" : currentDate.toString()])
                             
                         }, label: {
                             Image(systemName: "carrot.fill")
