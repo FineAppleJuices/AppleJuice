@@ -17,7 +17,11 @@ struct GoalHistoryView: View {
     @State private var selectedJuiceIndex: Int? = nil
     
     init(useSampleData: Bool = false) {
-        let viewModel = GoalHistoryViewModel(useSampleData: useSampleData)
+        
+//        TODO: 테스트코드 주석 지우기
+//        let viewModel = GoalHistoryViewModel(useSampleData: useSampleData)
+        
+        let viewModel = GoalHistoryViewModel()
         _vm = StateObject(wrappedValue: viewModel)
         _cp = StateObject(wrappedValue: ConnectivityProvider(viewModel: viewModel))
     }
