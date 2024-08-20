@@ -24,14 +24,14 @@ struct GoalHistoryView: View {
     
     var body: some View {
         ZStack {
-            Image("mainSky")
+            Image("main")
                 .resizable()
                 .ignoresSafeArea()
             
             VStack {
                 Text("주스 냉장고")
                     .foregroundColor(.white)
-                    .padding(30)
+                    .padding(50)
                     .font(Font.custom("Galmuri7", size: 48))
                 Spacer()
             }
@@ -41,10 +41,12 @@ struct GoalHistoryView: View {
                     VStack {
                         Image("fridge")
                             .resizable()
+                            .frame(width: geometry.size.width, height: geometry.size.height * 1.08)
+                            .offset(y: -geometry.size.height * 0.09)
                             .overlay(
                                 GeometryReader { fridgeGeometry in
-                                    VStack(spacing: fridgeGeometry.size.height * -0.006) {
-                                        Spacer().frame(height: fridgeGeometry.size.height * 0.33)
+                                    VStack(spacing: fridgeGeometry.size.height * -0.01) {
+                                        Spacer().frame(height: fridgeGeometry.size.height * 0.27)
                                         
                                         ForEach(0..<4, id: \.self) { rowIndex in
                                             HStack(spacing: fridgeGeometry.size.width * 0.02) {
@@ -72,18 +74,9 @@ struct GoalHistoryView: View {
                                                                 .font(.caption)
                                                             }
                                                         }
-                                                        if showTooltip && selectedJuiceIndex == index {
-                                                            Text("\(tooltipSteps) 걸음")
-                                                                .font(Font.custom("Galmuri7", size: 10))
-                                                                .padding(8)
-                                                                .background(Color.black.opacity(0.7))
-                                                                .foregroundColor(.white)
-                                                                .cornerRadius(8)
-                                                                .offset(y: -50) // 주스 위에 툴팁 표시
-                                                                .zIndex(1)
-                                                        }
+                                                        
                                                     }
-                                                    .frame(width: fridgeGeometry.size.width * 0.12, height: fridgeGeometry.size.height * 0.15)
+                                                    .frame(width: fridgeGeometry.size.width * 0.13, height: fridgeGeometry.size.height * 0.15)
                                                 }
                                             }
                                             
@@ -92,13 +85,26 @@ struct GoalHistoryView: View {
                                                 .frame(width: fridgeGeometry.size.width * 0.8, height: fridgeGeometry.size.height * 0.01)
                                         }
                                     }
-                                    .padding(EdgeInsets(top: fridgeGeometry.size.height * 0.02, leading: fridgeGeometry.size.width * 0.09, bottom: fridgeGeometry.size.height * 0.05, trailing: fridgeGeometry.size.width * 0.05))
+                                    .padding(EdgeInsets(top: fridgeGeometry.size.height * 0.02, leading: fridgeGeometry.size.width * 0.1, bottom: fridgeGeometry.size.height * 0.05, trailing: fridgeGeometry.size.width * 0.05))
                                 }
                             )
                         Spacer()
                     }
                     
-                    // 다음 냉장고 및 이전 냉장고 버튼 겹쳐서 표시
+                    if showTooltip {
+                        VStack {
+                            Spacer()
+                            Text("\(tooltipSteps) 걸음")
+                                .font(Font.custom("Galmuri7", size: 10))
+                                .padding(8)
+                                .background(Color.black.opacity(0.7))
+                                .foregroundColor(.white)
+                                .cornerRadius(8)
+                                .position(x: tooltipPosition.x, y: tooltipPosition.y - 30) // 툴팁 위치 조정
+                        }
+                        .zIndex(2)
+                    }
+                    
                     VStack {
                         HStack {
                             if currentPage > 0 {
@@ -131,10 +137,10 @@ struct GoalHistoryView: View {
                                 }
                             }
                         }
-                        .padding(.horizontal)
-                        .zIndex(2) // 버튼을 가장 앞에 표시
+                        .padding(50)
+                        .zIndex(2)
                     }
-                    .frame(width: geometry.size.width, height: geometry.size.height, alignment: .bottom) // 버튼을 하단에 고정
+                    .frame(width: geometry.size.width, height: geometry.size.height, alignment: .bottom)
                 }
             }
         }
