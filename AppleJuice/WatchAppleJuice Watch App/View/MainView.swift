@@ -29,7 +29,8 @@ struct MainView: View {
                 Image(viewModel.currentFrame)
                     .resizable()
                     .frame(width: 182, height: 182)
-                    .animation(.easeInOut(duration: 0.5), value: viewModel.currentFrame)                    .padding(.bottom,46)
+                    .animation(.easeInOut(duration: 0.1), value: viewModel.currentFrame)                    
+                    .padding(.bottom,46)
                 
                 VStack {
                     Spacer()

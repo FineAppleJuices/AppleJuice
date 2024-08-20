@@ -21,6 +21,7 @@ class AnimationViewModel: ObservableObject {
     init(frameNames: [String], infinite: Bool = false) {
         self.frameNames = frameNames
         self.currentFrame = frameNames.first ?? ""
+        
         if infinite {
             startInfiniteAnimation()
         } else {
