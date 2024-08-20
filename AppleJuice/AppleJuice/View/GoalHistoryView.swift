@@ -55,23 +55,31 @@ struct GoalHistoryView: View {
                                                     let entries = Array(vm.juiceEntries.sorted(by: { $0.date < $1.date }).dropFirst(currentPage * 20).prefix(20))
                                                     ZStack {
                                                         if index < entries.count {
-                                                            let entry = entries[index]
-                                                            VStack {
-                                                                Image("juice")
-                                                                    .resizable()
-                                                                    .scaledToFit()
-                                                                    .frame(width: fridgeGeometry.size.width * 0.09)
-                                                                    .onTapGesture {
-                                                                        tooltipSteps = entry.steps
-                                                                        selectedJuiceIndex = index
-                                                                        showTooltip.toggle()
-                                                                    }
-                                                                
-                                                                Text(entry.date, format: Date.FormatStyle()
-                                                                    .month(.twoDigits)
-                                                                    .day(.twoDigits))
-                                                                .foregroundColor(.black)
-                                                                .font(.caption)
+                                                            GeometryReader { juiceGeometry in
+                                                                let entry = entries[index]
+                                                                VStack {
+                                                                    Spacer()
+                                                                    Image("juice")
+                                                                        .resizable()
+                                                                        .scaledToFit()
+                                                                        .frame(width: fridgeGeometry.size.width * 0.09)
+                                                                        .onTapGesture {
+                                                                            tooltipSteps = entry.steps
+                                                                            selectedJuiceIndex = index
+                                                                            tooltipPosition = CGPoint(
+                                                                                x: juiceGeometry.frame(in: .global).midX,
+                                                                                y: juiceGeometry.frame(in: .global).minY
+                                                                            )
+                                                                            showTooltip.toggle()
+                                                                        }
+                                                                    
+                                                                    Text(entry.date, format: Date.FormatStyle()
+                                                                        .month(.twoDigits)
+                                                                        .day(.twoDigits))
+                                                                    .foregroundColor(.black)
+                                                                    .font(Font.custom("Galmuri7", size: 16))
+                                                                    Spacer()
+                                                                }
                                                             }
                                                         }
                                                         
@@ -95,12 +103,12 @@ struct GoalHistoryView: View {
                         VStack {
                             Spacer()
                             Text("\(tooltipSteps) 걸음")
-                                .font(Font.custom("Galmuri7", size: 10))
+                                .font(Font.custom("Galmuri7", size: 16))
                                 .padding(8)
                                 .background(Color.black.opacity(0.7))
                                 .foregroundColor(.white)
                                 .cornerRadius(8)
-                                .position(x: tooltipPosition.x, y: tooltipPosition.y - 30) // 툴팁 위치 조정
+                                .position(x: tooltipPosition.x, y: tooltipPosition.y - 30)
                         }
                         .zIndex(2)
                     }
