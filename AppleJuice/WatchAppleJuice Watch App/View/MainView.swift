@@ -17,6 +17,7 @@ struct MainView: View {
     @State private var currentIndex = 0
     @StateObject private var viewModel = AnimationViewModel(frameNames: ["green1", "green2", "green3"], infinite: true)
     
+    
     var body: some View {
         
         NavigationStack(path: $path){
@@ -29,7 +30,7 @@ struct MainView: View {
                 Image(viewModel.currentFrame)
                     .resizable()
                     .frame(width: 182, height: 182)
-                    .animation(.easeInOut(duration: 0.1), value: viewModel.currentFrame)                    
+                    .animation(.linear(duration: 0.001), value: viewModel.currentFrame)
                     .padding(.bottom,46)
                 
                 VStack {
@@ -40,13 +41,17 @@ struct MainView: View {
                             Button(action: {
                                 path.append(type)
                             }, label: {
-                                ZStack {
-                                    Circle()
-                                        .frame(width: 40, height: 40)
-                                        .foregroundColor(Color.black.opacity(0.8))
-                                    Image(systemName: type.iconImage)
-                                        .imageScale(.large)
-                                }
+                                Image("\(type.iconImage)")
+                                    .resizable()
+                                    .frame(width: 40, height: 40)
+//                                ZStack {
+////                                    Circle()
+////                                        .frame(width: 40, height: 40)
+////                                        .foregroundColor(Color.black.opacity(0.8))
+//                                    Image("\(type.iconImage)")
+//                                        .frame(width: 40, height: 40)
+////                                        .imageScale(.large)
+//                                }
                             })
                             .buttonStyle(PlainButtonStyle())
                             

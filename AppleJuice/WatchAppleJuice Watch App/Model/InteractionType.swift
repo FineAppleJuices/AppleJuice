@@ -17,18 +17,18 @@ enum InteractionType: Identifiable, CaseIterable {
     var iconImage : String {
         switch self {
         case .shower:
-            "shower.fill"
+            "button1"
         case .tanning:
-            "sun.max.fill"
+            "button2"
         case .sweet:
-            "wand.and.stars"
+            "button3"
         }
     }
     
     var frameNames: [String] {
         switch self {
         case .shower:
-            return ["shower1", "shower2", "shower3", "shower4"]
+            return ["bath1", "bath2", "bath3", "bath4"]
         case .tanning:
             return ["sun1", "sun2"]
         case .sweet:

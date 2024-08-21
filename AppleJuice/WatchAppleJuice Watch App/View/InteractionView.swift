@@ -24,7 +24,7 @@ struct AnimationView : View {
                 .resizable()
                 .frame(width: 162, height: 204)
                 .padding(.bottom, 10)
-                .animation(.easeInOut(duration: 0.1), value: vm.currentFrame)
+                .animation(.linear(duration: 0.001), value: vm.currentFrame)
         }
         .onChange(of: vm.shouldNavigateBack) { oldValue, newValue in
             if newValue {
