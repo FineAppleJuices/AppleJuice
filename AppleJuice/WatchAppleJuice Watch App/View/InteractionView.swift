@@ -17,12 +17,12 @@ struct InteractionView: View {
     }
     
     var body : some View {
-        VStack {
+        VStack(spacing:0) {
             Image(vm.currentFrame)
                 .resizable()
-                .scaledToFit()
-                .frame(width: 100, height: 100)
-                .animation(.easeInOut(duration: 0.1), value: vm.currentFrame)
+                .frame(width: 162, height: 204)
+                .padding(.bottom, 10)
+                .animation(.linear(duration: 0.001), value: vm.currentFrame)
         }
         .onChange(of: vm.shouldNavigateBack) { oldValue, newValue in
             if newValue {
