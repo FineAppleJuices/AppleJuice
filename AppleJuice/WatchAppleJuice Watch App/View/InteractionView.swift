@@ -7,18 +7,16 @@
 
 import SwiftUI
 
-struct AnimationView : View {
-    
-    @StateObject var vm: AnimationViewModel
+struct InteractionView: View {
+    @StateObject var vm: InteractionViewModel
     @Binding var path: NavigationPath
     
     init(interactionType: InteractionType, path: Binding<NavigationPath>) {
-        _vm = StateObject(wrappedValue: AnimationViewModel(frameNames: interactionType.frameNames))
+        _vm = StateObject(wrappedValue: InteractionViewModel(frameNames: interactionType.frameNames))
         _path = path
     }
     
     var body : some View {
-        
         VStack {
             Image(vm.currentFrame)
                 .resizable()

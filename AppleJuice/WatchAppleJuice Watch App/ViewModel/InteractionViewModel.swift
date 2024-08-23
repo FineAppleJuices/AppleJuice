@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-class AnimationViewModel: ObservableObject {
+class InteractionViewModel: ObservableObject {
     
     @Published var currentFrame: String
     @Published var shouldNavigateBack: Bool = false
