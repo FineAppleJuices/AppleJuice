@@ -10,7 +10,7 @@ import SwiftUI
 enum InteractionType: Identifiable, CaseIterable {
     case shower
     case tanning
-    case wipe
+    case sweet
     
     var id: Self {self}
     
@@ -20,7 +20,7 @@ enum InteractionType: Identifiable, CaseIterable {
             1000
         case .tanning:
             3000
-        case .wipe:
+        case .sweet:
             7000
         }
     }
@@ -28,22 +28,22 @@ enum InteractionType: Identifiable, CaseIterable {
     var iconImage : String {
         switch self {
         case .shower:
-            "shower.fill"
+            "button1"
         case .tanning:
-            "sun.max.fill"
-        case .wipe:
-            "wand.and.stars"
+            "button2"
+        case .sweet:
+            "button3"
         }
     }
     
     var frameNames: [String] {
         switch self {
         case .shower:
-            return ["showerFrame1", "showerFrame2", "showerFrame3"]
+            return ["bath1", "bath2", "bath3", "bath4"]
         case .tanning:
-            return ["tanningFrame1", "tanningFrame2", "tanningFrame3"]
-        case .wipe:
-            return ["wipeFrame1", "wipeFrame2", "wipeFrame3"] 
+            return ["sun1", "sun2"]
+        case .sweet:
+            return ["honey1", "honey2", "honey3", "honey4"]
         }
     }
     
