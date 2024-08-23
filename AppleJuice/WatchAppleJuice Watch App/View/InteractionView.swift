@@ -20,9 +20,15 @@ struct InteractionView: View {
         VStack(spacing:0) {
             Image(vm.currentFrame)
                 .resizable()
-                .frame(width: 162, height: 204)
-                .padding(.bottom, 10)
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
                 .animation(.linear(duration: 0.001), value: vm.currentFrame)
+        }
+        .toolbar{
+            ToolbarItem(placement: .topBarTrailing) {
+                Rectangle()
+                    .opacity(0)
+            }
         }
         .onChange(of: vm.shouldNavigateBack) { oldValue, newValue in
             if newValue {
