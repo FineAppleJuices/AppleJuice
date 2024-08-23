@@ -13,14 +13,18 @@ struct MainView: View {
     @State private var path = NavigationPath()
     @StateObject private var vm = MainViewModel()
     @StateObject private var cp = ConnectivityProvider()
+<<<<<<< HEAD
     
     @State private var currentIndex = 0
     @StateObject private var viewModel = AnimationViewModel(frameNames: ["green1", "green2", "green3"], infinite: true)
     
+=======
+>>>>>>> main
     
     var body: some View {
         
         NavigationStack(path: $path){
+<<<<<<< HEAD
 <<<<<<< HEAD
             ZStack {
                 Image("watchbackground")
@@ -39,6 +43,8 @@ struct MainView: View {
                     
                     HStack(spacing: 10){
 =======
+=======
+>>>>>>> main
             ZStack{
                 
                 //걸음 수에 따라 배경이미지 변경
@@ -67,11 +73,18 @@ struct MainView: View {
 //                                }
                             })
 <<<<<<< HEAD
+<<<<<<< HEAD
                             .buttonStyle(PlainButtonStyle())
                             
                         }
                     }
                     .padding(.bottom, 30)
+=======
+                            .disabled(!(type.milestone...).contains(vm.stepCount))
+                        }
+                    }
+
+>>>>>>> main
 =======
                             .disabled(!(type.milestone...).contains(vm.stepCount))
                         }
@@ -86,9 +99,12 @@ struct MainView: View {
             .toolbar{
                 // 정해진 mileStone이 있는 경우에만 랜더링
 <<<<<<< HEAD
+<<<<<<< HEAD
                 if let milestone = vm.dailyStatus.mileStone {
                     //milestone이 .tenThousand이 되면 주스 버튼 활성화
 =======
+=======
+>>>>>>> main
                     
 >>>>>>> main
                     ToolbarItem(placement: .topBarTrailing){
@@ -102,6 +118,7 @@ struct MainView: View {
                             
                         }, label: {
 <<<<<<< HEAD
+<<<<<<< HEAD
                             ZStack {
                                 Circle()
                                     .frame(width: 40, height: 40)
@@ -111,12 +128,18 @@ struct MainView: View {
 =======
                             Image(systemName: "carrot.fill")
 >>>>>>> main
+=======
+                            Image(systemName: "carrot.fill")
+>>>>>>> main
                         })
                         .buttonStyle(PlainButtonStyle())
                     }
 <<<<<<< HEAD
+<<<<<<< HEAD
                 }
 =======
+=======
+>>>>>>> main
                 
 
 >>>>>>> main
