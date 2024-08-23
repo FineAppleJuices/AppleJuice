@@ -1,7 +1,11 @@
 {
   "images" : [
     {
+<<<<<<< HEAD
       "filename" : "honey1.jpeg",
+=======
+      "filename" : "honey1.png",
+>>>>>>> main
       "idiom" : "universal",
       "scale" : "1x"
     },

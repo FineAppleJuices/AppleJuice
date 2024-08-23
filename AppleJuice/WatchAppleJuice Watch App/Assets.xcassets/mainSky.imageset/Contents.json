@@ -1,7 +1,11 @@
 {
   "images" : [
     {
+<<<<<<< HEAD
       "filename" : "mainSky.jpeg",
+=======
+      "filename" : "mainSky.png",
+>>>>>>> main
       "idiom" : "universal",
       "scale" : "1x"
     },

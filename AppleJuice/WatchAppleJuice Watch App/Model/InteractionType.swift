@@ -14,6 +14,17 @@ enum InteractionType: Identifiable, CaseIterable {
     
     var id: Self {self}
     
+    var milestone : Int {
+        switch self {
+        case .shower:
+            1000
+        case .tanning:
+            3000
+        case .wipe:
+            7000
+        }
+    }
+    
     var iconImage : String {
         switch self {
         case .shower:

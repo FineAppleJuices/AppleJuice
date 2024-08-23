@@ -18,7 +18,6 @@ extension DailyStatusEntity {
 
     @NSManaged public var createdAt: Date?
     @NSManaged public var id: String?
-    @NSManaged public var isAcheive: Bool
     @NSManaged public var steps: Int16
 
 }
