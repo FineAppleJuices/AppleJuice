@@ -4,67 +4,68 @@
 //
 //  Created by 이종선 on 6/24/24.
 //
-
 import SwiftUI
-
-// Apple Watch Main View
 
 struct MainView: View {
     @State private var path = NavigationPath()
     @StateObject private var vm = MainViewModel()
     @StateObject private var cp = ConnectivityProvider()
+    @State private var currentIndex = 0
+    @StateObject private var viewModel = InteractionViewModel(frameNames: ["green1", "green2", "green3"], infinite: true)
     
     var body: some View {
-        
-        NavigationStack(path: $path){
-            ZStack{
+        NavigationStack(path: $path) {
+            ZStack {
+                Image("watchbackground")
+                    .resizable()
+                    .scaledToFill()
+                    .edgesIgnoringSafeArea(.all)
                 
-                //걸음 수에 따라 배경이미지 변경
-                vm.walkingLevel.mileStoneView
                 
-                VStack(spacing: 20) {
-                    Text("\(vm.stepCount)")
-                    
-                    //걸음 수에 따라 버튼 활성화 조절
-                    HStack(spacing: 12){
-                        ForEach(InteractionType.allCases){ type in
-                            Button(action: {
-                                path.append(type)
-                            }, label: {
-                                Image(systemName: type.iconImage)
-                                    .imageScale(.large)
-                            })
-                            .disabled(!(type.milestone...).contains(vm.stepCount))
-                        }
-                    }
-
-                }
+                Image(viewModel.currentFrame)
+                    .resizable()
+                    .scaledToFill()
+                    .animation(.linear(duration: 0.001), value: viewModel.currentFrame)
+                    .padding(.bottom, 12)
+                
             }
             .navigationDestination(for: InteractionType.self) { type in
                 InteractionView(interactionType: type, path: $path)
             }
-            .toolbar{
-                // 정해진 mileStone이 있는 경우에만 랜더링
-                    
-                    ToolbarItem(placement: .topBarTrailing){
-                        Button(action: {
-                            //cp.sendMessage(message: [ "key" : true])
-                            //버튼 눌러서 날짜(yyyy-mm-dd) 보내기
-                            cp.sendMessage(message: [ "date" : Date().toString()])
-                            
-                            //테스트용
-                            vm.stepCount += 1000
-                            
-                        }, label: {
-                            Image(systemName: "carrot.fill")
-                        })
-                    }
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Text("\(vm.stepCount)")
+                }
                 
-
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(action: {
+                        cp.sendMessage(message: ["date": Date().toString()])
+                        vm.stepCount += 1000
+                    }, label: {
+                        Image(systemName: "carrot.fill")
+                    })
+                }
+                
+                ToolbarItem(placement: .bottomBar) {
+                    HStack(spacing: 20){
+                        ForEach(InteractionType.allCases) { type in
+                            Button(action: {
+                                path.append(type)
+                            }, label: {
+                                Image("\(type.iconImage)")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 40, height: 40)
+                            })
+                            .buttonStyle(PlainButtonStyle())
+                            .disabled(!(type.milestone...).contains(vm.stepCount))
+                        }
+                    }
+                }
             }
-        }
+            
 
-        
+        }
     }
 }
 
