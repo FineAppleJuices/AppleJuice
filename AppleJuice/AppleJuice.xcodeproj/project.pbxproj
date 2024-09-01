@@ -21,12 +21,6 @@
 		AFB1DB8E2C295988008A6A2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB1DB8D2C295988008A6A2D /* Assets.xcassets */; };
 		AFB1DB912C295988008A6A2D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB1DB902C295988008A6A2D /* Preview Assets.xcassets */; };
 		AFB1DB942C295988008A6A2D /* WatchAppleJuice Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AFB1DB872C295987008A6A2D /* WatchAppleJuice Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		AFB1DBCA2C2EEA86008A6A2D /* CharacterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBC92C2EEA86008A6A2D /* CharacterType.swift */; };
-		AFB1DBCB2C2EEA86008A6A2D /* CharacterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBC92C2EEA86008A6A2D /* CharacterType.swift */; };
-		AFB1DBCD2C2EEDA8008A6A2D /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBCC2C2EEDA8008A6A2D /* Character.swift */; };
-		AFB1DBCE2C2EEDA8008A6A2D /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBCC2C2EEDA8008A6A2D /* Character.swift */; };
-		AFB1DBD02C2EF013008A6A2D /* MileStone.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBCF2C2EF013008A6A2D /* MileStone.swift */; };
-		AFB1DBD12C2EF013008A6A2D /* MileStone.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBCF2C2EF013008A6A2D /* MileStone.swift */; };
 		AFB1DBD32C2EF44C008A6A2D /* DailyStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBD22C2EF44C008A6A2D /* DailyStatus.swift */; };
 		AFB1DBD42C2EF44C008A6A2D /* DailyStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBD22C2EF44C008A6A2D /* DailyStatus.swift */; };
 		AFB1DBD62C2EF810008A6A2D /* StepsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBD52C2EF810008A6A2D /* StepsManager.swift */; };
@@ -89,9 +83,6 @@
 		AFB1DB8B2C295987008A6A2D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		AFB1DB8D2C295988008A6A2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFB1DB902C295988008A6A2D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AFB1DBC92C2EEA86008A6A2D /* CharacterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterType.swift; sourceTree = "<group>"; };
-		AFB1DBCC2C2EEDA8008A6A2D /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
-		AFB1DBCF2C2EF013008A6A2D /* MileStone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MileStone.swift; sourceTree = "<group>"; };
 		AFB1DBD22C2EF44C008A6A2D /* DailyStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyStatus.swift; sourceTree = "<group>"; };
 		AFB1DBD52C2EF810008A6A2D /* StepsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsManager.swift; sourceTree = "<group>"; };
 		AFB1DBDA2C2F0332008A6A2D /* InteractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionView.swift; sourceTree = "<group>"; };
@@ -214,9 +205,6 @@
 			children = (
 				AFB1DC292C32E6AD008A6A2D /* DailyStatusEntity+CoreDataClass.swift */,
 				AFB1DC2A2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataProperties.swift */,
-				AFB1DBC92C2EEA86008A6A2D /* CharacterType.swift */,
-				AFB1DBCC2C2EEDA8008A6A2D /* Character.swift */,
-				AFB1DBCF2C2EF013008A6A2D /* MileStone.swift */,
 				AFB1DBD22C2EF44C008A6A2D /* DailyStatus.swift */,
 			);
 			path = Model;
@@ -404,7 +392,6 @@
 			files = (
 				AFB1DC2B2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataClass.swift in Sources */,
 				AFB1DC2C2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataProperties.swift in Sources */,
-				AFB1DBCA2C2EEA86008A6A2D /* CharacterType.swift in Sources */,
 				AF7215372C44D433007763C6 /* AppDelegate.swift in Sources */,
 				AFB1DBF42C2FE019008A6A2D /* PersistentController.swift in Sources */,
 				AFB1DBFD2C2FE876008A6A2D /* GoalHistoryViewModel.swift in Sources */,
@@ -413,8 +400,6 @@
 				AFB1DB782C294FB8008A6A2D /* GoalHistoryView.swift in Sources */,
 				AFB1DB762C294FB8008A6A2D /* AppleJuiceApp.swift in Sources */,
 				AF7215332C44CF09007763C6 /* ConnectivityProvider.swift in Sources */,
-				AFB1DBD02C2EF013008A6A2D /* MileStone.swift in Sources */,
-				AFB1DBCD2C2EEDA8008A6A2D /* Character.swift in Sources */,
 				AFB1DBF72C2FE0B3008A6A2D /* CoreDataManager.swift in Sources */,
 				AFB1DBD62C2EF810008A6A2D /* StepsManager.swift in Sources */,
 			);
@@ -426,7 +411,6 @@
 			files = (
 				EE3204542C5680C5009B9E3A /* BackgroundView.swift in Sources */,
 				AFB1DBF22C2FDEE2008A6A2D /* AppleJuice.xcdatamodeld in Sources */,
-				AFB1DBCB2C2EEA86008A6A2D /* CharacterType.swift in Sources */,
 				AFB1DBD42C2EF44C008A6A2D /* DailyStatus.swift in Sources */,
 				AFB1DB8C2C295987008A6A2D /* MainView.swift in Sources */,
 				AFB1DC2D2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataClass.swift in Sources */,
@@ -435,10 +419,8 @@
 				AFB1DBEB2C2FAB24008A6A2D /* InteractionViewModel.swift in Sources */,
 				AFB1DB8A2C295987008A6A2D /* WatchAppleJuiceApp.swift in Sources */,
 				AFB1DBE02C2F03A6008A6A2D /* InteractionType.swift in Sources */,
-				AFB1DBD12C2EF013008A6A2D /* MileStone.swift in Sources */,
 				EEEC6BC12C567799006E4246 /* Extensions.swift in Sources */,
 				EE3204522C567CDC009B9E3A /* WalkingLevel.swift in Sources */,
-				AFB1DBCE2C2EEDA8008A6A2D /* Character.swift in Sources */,
 				AFB1DBD72C2EF810008A6A2D /* StepsManager.swift in Sources */,
 				AFB1DBED2C2FDAFC008A6A2D /* MainViewModel.swift in Sources */,
 				AF7215352C44D022007763C6 /* ConnectivityProvider.swift in Sources */,
