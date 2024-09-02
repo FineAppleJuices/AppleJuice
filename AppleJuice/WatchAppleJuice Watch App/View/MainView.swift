@@ -35,7 +35,9 @@ struct MainView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Text("\(vm.stepCount)")
+                        .font(Font.custom("Galmuri7", size: 16))
                 }
+                
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: {

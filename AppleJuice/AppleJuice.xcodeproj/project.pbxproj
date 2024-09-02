@@ -44,6 +44,8 @@
 		AFB1DC2C2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DC2A2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataProperties.swift */; };
 		AFB1DC2D2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DC292C32E6AD008A6A2D /* DailyStatusEntity+CoreDataClass.swift */; };
 		AFB1DC2E2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DC2A2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataProperties.swift */; };
+		D3B8E98E2C85E7B000A6B5C9 /* Galmuri7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3B8E98D2C85E7B000A6B5C9 /* Galmuri7.ttf */; };
+		D3B8E9912C85E80300A6B5C9 /* Galmuri7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3B8E9902C85E80300A6B5C9 /* Galmuri7.ttf */; };
 		EE3204522C567CDC009B9E3A /* WalkingLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3204512C567CDC009B9E3A /* WalkingLevel.swift */; };
 		EE3204542C5680C5009B9E3A /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3204532C5680C5009B9E3A /* BackgroundView.swift */; };
 		EEEC6BC12C567799006E4246 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEC6BC02C567799006E4246 /* Extensions.swift */; };
@@ -104,6 +106,10 @@
 		AFB1DBFC2C2FE876008A6A2D /* GoalHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalHistoryViewModel.swift; sourceTree = "<group>"; };
 		AFB1DC292C32E6AD008A6A2D /* DailyStatusEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyStatusEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AFB1DC2A2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyStatusEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D3B8E98C2C85E66D00A6B5C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D3B8E98D2C85E7B000A6B5C9 /* Galmuri7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Galmuri7.ttf; sourceTree = "<group>"; };
+		D3B8E98F2C85E7BF00A6B5C9 /* WatchAppleJuice-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WatchAppleJuice-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		D3B8E9902C85E80300A6B5C9 /* Galmuri7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Galmuri7.ttf; sourceTree = "<group>"; };
 		EE008C782C4E759E009933CA /* WatchAppleJuice Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchAppleJuice Watch App.entitlements"; sourceTree = "<group>"; };
 		EE008C792C4E75AA009933CA /* AppleJuice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppleJuice.entitlements; sourceTree = "<group>"; };
 		EE3204512C567CDC009B9E3A /* WalkingLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingLevel.swift; sourceTree = "<group>"; };
@@ -162,6 +168,7 @@
 		AFB1DB742C294FB8008A6A2D /* AppleJuice */ = {
 			isa = PBXGroup;
 			children = (
+				D3B8E98C2C85E66D00A6B5C9 /* Info.plist */,
 				EE008C792C4E75AA009933CA /* AppleJuice.entitlements */,
 				AFB1DBEF2C2FDEE1008A6A2D /* AppleJuice.xcdatamodeld */,
 				AFB1DBEE2C2FDE78008A6A2D /* CoreData */,
@@ -172,6 +179,7 @@
 				AFB1DB752C294FB8008A6A2D /* AppleJuiceApp.swift */,
 				AF7215362C44D433007763C6 /* AppDelegate.swift */,
 				AFB1DB792C294FB9008A6A2D /* Assets.xcassets */,
+				D3B8E9902C85E80300A6B5C9 /* Galmuri7.ttf */,
 				AFB1DB7B2C294FB9008A6A2D /* Preview Content */,
 			);
 			path = AppleJuice;
@@ -188,6 +196,7 @@
 		AFB1DB882C295987008A6A2D /* WatchAppleJuice Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				D3B8E98F2C85E7BF00A6B5C9 /* WatchAppleJuice-Watch-App-Info.plist */,
 				EEEC6BBF2C56778B006E4246 /* Tools */,
 				EE008C7A2C4E85E3009933CA /* Manager */,
 				EE008C782C4E759E009933CA /* WatchAppleJuice Watch App.entitlements */,
@@ -196,6 +205,7 @@
 				AFB1DBD92C2EFF6D008A6A2D /* View */,
 				AFB1DB892C295987008A6A2D /* WatchAppleJuiceApp.swift */,
 				AFB1DB8D2C295988008A6A2D /* Assets.xcassets */,
+				D3B8E98D2C85E7B000A6B5C9 /* Galmuri7.ttf */,
 				AFB1DB8F2C295988008A6A2D /* Preview Content */,
 			);
 			path = "WatchAppleJuice Watch App";
@@ -381,6 +391,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B8E9912C85E80300A6B5C9 /* Galmuri7.ttf in Resources */,
 				AFB1DB7D2C294FB9008A6A2D /* Preview Assets.xcassets in Resources */,
 				AFB1DB7A2C294FB9008A6A2D /* Assets.xcassets in Resources */,
 			);
@@ -390,6 +401,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B8E98E2C85E7B000A6B5C9 /* Galmuri7.ttf in Resources */,
 				AFB1DB912C295988008A6A2D /* Preview Assets.xcassets in Resources */,
 				AFB1DB8E2C295988008A6A2D /* Assets.xcassets in Resources */,
 			);
@@ -588,6 +600,9 @@
 				DEVELOPMENT_TEAM = 6KQJH558XZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppleJuice/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "\"Health Records Usage Description\"";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "\"Health Share Usage Description\"";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "\"Health Update Usage Description\"";
@@ -626,6 +641,9 @@
 				DEVELOPMENT_TEAM = 6KQJH558XZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppleJuice/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "\"Health Records Usage Description\"";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "\"Health Share Usage Description\"";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "\"Health Update Usage Description\"";
@@ -663,6 +681,7 @@
 				DEVELOPMENT_TEAM = 6KQJH558XZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WatchAppleJuice-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = WatchAppleJuice;
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "\"Health Records Usage Description\"";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "\"Health Share Usage Description\"";
@@ -697,6 +716,7 @@
 				DEVELOPMENT_TEAM = 6KQJH558XZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WatchAppleJuice-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = WatchAppleJuice;
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "\"Health Records Usage Description\"";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "\"Health Share Usage Description\"";
