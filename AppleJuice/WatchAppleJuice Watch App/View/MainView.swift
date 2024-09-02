@@ -8,7 +8,7 @@ import SwiftUI
 
 struct MainView: View {
     @State private var path = NavigationPath()
-    @StateObject private var vm = MainViewModel()
+    @StateObject private var sm = StepsManager()
     @StateObject private var cp = ConnectivityProvider()
     @State private var currentIndex = 0
     @StateObject private var viewModel = InteractionViewModel(frameNames: ["green1", "green2", "green3"], infinite: true)
@@ -20,7 +20,6 @@ struct MainView: View {
                     .resizable()
                     .scaledToFill()
                     .edgesIgnoringSafeArea(.all)
-                
                 
                 Image(viewModel.currentFrame)
                     .resizable()
@@ -34,15 +33,14 @@ struct MainView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Text("\(vm.stepCount)")
+                    Text("\(sm.stepCount)")
                         .font(Font.custom("Galmuri7", size: 16))
                 }
-                
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: {
                         cp.sendMessage(message: ["date": Date().toString()])
-                        vm.stepCount += 1000
+                        sm.stepCount += 1000
                     }, label: {
                         Image(systemName: "carrot.fill")
                     })
@@ -60,7 +58,7 @@ struct MainView: View {
                                     .frame(width: 40, height: 40)
                             })
                             .buttonStyle(PlainButtonStyle())
-                            .disabled(!(type.milestone...).contains(vm.stepCount))
+                            .disabled(!(type.milestone...).contains(sm.stepCount))
                         }
                     }
                 }
