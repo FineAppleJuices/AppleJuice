@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GoalHistoryView: View {
+    @State private var lastLoginDate: Date? = nil
     
     @StateObject private var vm: GoalHistoryViewModel
     @StateObject private var cp: ConnectivityProvider
@@ -37,7 +38,7 @@ struct GoalHistoryView: View {
                 Text("주스 냉장고")
                     .foregroundColor(.white)
                     .padding(50)
-                .font(Font.custom("Galmuri7", size: 48))
+                    .font(Font.custom("Galmuri7", size: 48))
                 Spacer()
             }
             
@@ -108,7 +109,7 @@ struct GoalHistoryView: View {
                         VStack {
                             Spacer()
                             Text("\(tooltipSteps) 걸음")
-                            .font(Font.custom("Galmuri7", size: 16))
+                                .font(Font.custom("Galmuri7", size: 16))
                                 .padding(8)
                                 .background(Color.black.opacity(0.7))
                                 .foregroundColor(.white)
@@ -126,7 +127,7 @@ struct GoalHistoryView: View {
                                     showTooltip = false
                                 }) {
                                     Text("이전 냉장고")
-                                    .font(Font.custom("Galmuri7", size: 16))
+                                        .font(Font.custom("Galmuri7", size: 16))
                                         .padding(7)
                                         .background(Color.gray)
                                         .foregroundColor(.white)
@@ -142,7 +143,7 @@ struct GoalHistoryView: View {
                                     showTooltip = false
                                 }) {
                                     Text("다음 냉장고")
-                                    .font(Font.custom("Galmuri7", size: 16))
+                                        .font(Font.custom("Galmuri7", size: 16))
                                         .padding(7)
                                         .background(Color.gray)
                                         .foregroundColor(.white)
@@ -164,6 +165,9 @@ struct GoalHistoryView: View {
         }
         .onChange(of: vm.juiceEntries) { oldValue, newValue in
             print("Juice entries updated: \(newValue.count)")
+        }
+        .onAppear {
+            lastLoginDate = getLastLoginDate() // 화면이 나타날 때 최종 접속 일자를 불러옴
         }
     }
 }

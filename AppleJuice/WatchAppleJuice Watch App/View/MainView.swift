@@ -11,6 +11,7 @@ struct MainView: View {
     @StateObject private var sm = StepsManager()
     @StateObject private var cp = ConnectivityProvider()
     @State private var currentIndex = 0
+    @State private var juiceButtonVisible = true
     @StateObject private var viewModel = InteractionViewModel(frameNames: ["green1", "green2", "green3"], infinite: true)
     
     var body: some View {
@@ -37,13 +38,21 @@ struct MainView: View {
                         .font(Font.custom("Galmuri7", size: 16))
                 }
                 
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: {
-                        cp.sendMessage(message: ["date": Date().toString()])
-                        sm.stepCount += 1000
-                    }, label: {
-                        Image(systemName: "carrot.fill")
-                    })
+                if sm.stepCount >= 10000 && juiceButtonVisible {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button(action: {
+                            cp.sendMessage(message: ["date": Date()])
+                            
+                            //버튼 눌렀을 때 축하 애니메이션
+                            
+                            //메인화면 사과 캐릭터에서 주스 캐릭터로 바뀌기
+                            
+                            //애니메이션 지난후 버튼 사라지게 하기
+                            juiceButtonVisible = false
+                        }, label: {
+                            Image(systemName: "takeoutbag.and.cup.and.straw.fill")
+                        })
+                    }
                 }
                 
                 ToolbarItem(placement: .bottomBar) {
