@@ -28,6 +28,7 @@ func saveLastLoginDate() {
     let currentDate = Date() // 현재 날짜 가져오기
     UserDefaults.standard.set(currentDate, forKey: "lastLoginDate") // UserDefaults에 저장
 }
+
 // 마지막 접속 일자를 가지고 오기
 func getLastLoginDate() -> Date? {
     return UserDefaults.standard.object(forKey: "lastLoginDate") as? Date

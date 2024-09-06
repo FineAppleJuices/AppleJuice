@@ -11,17 +11,15 @@ class CoreDataManager {
     static let shared = CoreDataManager()
     private let mainContext : NSManagedObjectContext
     
-    private init(){
+    private init() {
         mainContext = PersistenceController.shared.container.viewContext
     }
     
-    
-    func createEntity(status: DailyStatus){
-        
+    func createEntity(dailyStatus: DailyStatus) {
         let entity = DailyStatusEntity(context: mainContext)
-        entity.id = status.id
-        entity.steps = Int16(status.steps)
-        entity.createdAt = status.date
+        entity.id = dailyStatus.id
+        entity.steps = Int16(dailyStatus.steps)
+        entity.createdAt = dailyStatus.date
 
         do{
             try mainContext.save()
@@ -32,8 +30,7 @@ class CoreDataManager {
         
     }
     
-    func fetchAllEntity() -> [DailyStatus]{
-        
+    func fetchAllEntity() -> [DailyStatus] {
         let request: NSFetchRequest<DailyStatusEntity> = DailyStatusEntity.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "createdAt", ascending: false)
         request.sortDescriptors = [sortDescriptor]

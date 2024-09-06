@@ -7,14 +7,13 @@
 
 import Foundation
 
-struct DailyStatus : Identifiable {
+struct DailyStatus : Identifiable, Equatable {
     
     let id: String
     let date: Date
     var steps: Int = 0
     
     static func from(entity: DailyStatusEntity) -> Self {
-        
         return DailyStatus(id: entity.id ?? "", date: entity.createdAt ?? .now, steps: Int(entity.steps))
     }
 }

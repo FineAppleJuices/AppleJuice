@@ -48,7 +48,7 @@ struct MainView: View {
                             //메인화면 사과 캐릭터에서 주스 캐릭터로 바뀌기
                             
                             //애니메이션 지난후 버튼 사라지게 하기
-                            juiceButtonVisible = false
+                            //juiceButtonVisible = false
                         }, label: {
                             Image(systemName: "takeoutbag.and.cup.and.straw.fill")
                         })
