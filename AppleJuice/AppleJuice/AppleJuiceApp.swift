@@ -14,6 +14,7 @@ struct AppleJuiceApp: App {
     
     init() {
         saveLastLoginDate() // 앱 실행 시 호출
+        
     }
 
     var body: some Scene {

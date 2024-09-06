@@ -16,7 +16,9 @@ class GoalHistoryViewModel: ObservableObject {
     private var healthStore = HKHealthStore()
 
     init() {
-        statusList = coreDataManager.fetchAllEntity()
+        //초기화 할때 한번씩 걸음수 갱신하기
+        refreshStepCounts()
+        statusList = coreDataManager.fetchEntities()
         requestHealthAuthorization()
     }
         
@@ -35,7 +37,8 @@ class GoalHistoryViewModel: ObservableObject {
     // CoreDate 에 새로운 데이터 추가하기
     func addJuiceEntry(date: Date, steps: Int) {
         coreDataManager.createEntity(dailyStatus: DailyStatus(id: UUID().uuidString, date: date, steps: steps))
-        statusList = coreDataManager.fetchAllEntity()
+        //리스트 갱신하기
+        statusList = coreDataManager.fetchEntities()
     }
 
     // HealthKit에 해당 날짜로 쿼리를 보내 걸음 수를 받아오기
@@ -55,5 +58,23 @@ class GoalHistoryViewModel: ObservableObject {
             }
         }
         healthStore.execute(query)
+    }
+    
+    //앱을 기동한 날짜와 마지막으로 저장된 접속 날짜 사이에 있는 데이터들의 헬스킷을 한번 더 갱신
+    func refreshStepCounts() {
+        let from: Date = getLastLoginDate() ?? Date()
+        let to: Date = Date()
+
+        let listToRefresh: [DailyStatus] = coreDataManager.fetchEntities(startDate: from, endDate: to)
+        
+        for data in listToRefresh {
+            var data = data
+            // 걸음 수를 비동기적으로 가져와서 데이터를 갱신
+            fetchSteps(for: data.date) { steps in
+                data.steps = steps
+                // 데이터를 업데이트한 후에 CoreData에 저장
+                self.coreDataManager.saveContext()
+            }
+        }
     }
 }

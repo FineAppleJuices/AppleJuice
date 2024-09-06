@@ -14,7 +14,6 @@ class ConnectivityProvider: NSObject, ObservableObject {
     @Published var receivedMessage: [String: Any] = [:]
     private var viewModel: GoalHistoryViewModel
 
-    
     // NotificationCenter에 Observer 등록
     init(viewModel: GoalHistoryViewModel) {
         self.viewModel = viewModel
