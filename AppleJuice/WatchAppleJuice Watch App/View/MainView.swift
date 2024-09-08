@@ -12,6 +12,7 @@ struct MainView: View {
     @StateObject private var cp = ConnectivityProvider()
     @State private var currentIndex = 0
     @StateObject private var viewModel = InteractionViewModel(frameNames: ["green1", "green2", "green3"], infinite: true)
+    @StateObject private var seventhousandviewModel = InteractionViewModel(frameNames: ["red1", "red2", "red3"], infinite: true)
     
     var body: some View {
         NavigationStack(path: $path) {
@@ -21,12 +22,10 @@ struct MainView: View {
                     .scaledToFill()
                     .edgesIgnoringSafeArea(.all)
                 
-                
                 Image(viewModel.currentFrame)
                     .resizable()
-                    .scaledToFill()
                     .animation(.linear(duration: 0.001), value: viewModel.currentFrame)
-                    .padding(.bottom, 12)
+                    .padding(.bottom, 8)
                 
             }
             .navigationDestination(for: InteractionType.self) { type in
@@ -37,7 +36,11 @@ struct MainView: View {
                     Text("\(vm.stepCount)")
                         .font(Font.custom("Galmuri7", size: 16))
                 }
+                // if vm.stepCount >= 7000 && 3번째 버튼을 누르면
+                //seventhousandmodel 호출
                 
+                // if vm.stepCount >= 10000 새로운 뷰 애니메이션 보여주기,
+                //메인 캐릭터 빨대로 인터랙션 나타내기
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: {
