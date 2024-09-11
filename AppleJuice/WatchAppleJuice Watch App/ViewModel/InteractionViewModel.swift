@@ -28,7 +28,7 @@ class InteractionViewModel: ObservableObject {
             startAnimation()
         }
     }
-
+    
     private func startAnimation() {
         timer = Timer.publish(every: 0.5, on: .main, in: .common)
             .autoconnect()
