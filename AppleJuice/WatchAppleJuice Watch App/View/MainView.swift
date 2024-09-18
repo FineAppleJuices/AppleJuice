@@ -21,17 +21,8 @@ struct MainView: View {
     var body: some View {
         NavigationStack(path: $path) {
             ZStack {
-//                 Image("watchbackground")
-//                     .resizable()
-//                     .scaledToFill()
-//                     .edgesIgnoringSafeArea(.all)
-                
-//                 Image(viewModel.currentFrame)
-//                     .resizable()
-//                     .scaledToFill()
-//                     .animation(.linear(duration: 0.001), value: viewModel.currentFrame)
-//                     .padding(.bottom, 12)
-                if vm.stepCount >= 10000 {
+                //걸음 수가 만보 이상일 때와 만보 이하일 때 배경화면이 바뀜
+                if sm.stepCount >= 10000 {
                     Image("watchbackground2")
                         .resizable()
                         .scaledToFill()
@@ -43,12 +34,13 @@ struct MainView: View {
                         .edgesIgnoringSafeArea(.all)
                 }
                 
-                if vm.stepCount > 10000 {
+                //걸음 수 만보 이상일때 캐릭터 움직임 애니메이션
+                if sm.stepCount > 10000 {
                     Image(clearModel.currentFrame)
                         .resizable()
                         .animation(.linear(duration: 0.001), value: clearModel.currentFrame)
                         .padding(.bottom, 8)
-                } else if vm.stepCount == 10000{
+                } else if sm.stepCount == 10000 {
                     Image("juiceclear")
                         .resizable()
                         .padding(.bottom, 8)
@@ -59,7 +51,7 @@ struct MainView: View {
                             .padding(.top, 15)
                         Spacer()
                     }
-                } else if vm.stepCount >= 7000 && ispushed == true {
+                } else if sm.stepCount >= 7000 && ispushed == true {
                     Image(seventhousandviewModel.currentFrame)
                         .resizable()
                         .animation(.linear(duration: 0.001), value: seventhousandviewModel.currentFrame)
@@ -74,7 +66,7 @@ struct MainView: View {
             .navigationDestination(for: InteractionType.self) { type in
                 InteractionView(interactionType: type, path: $path)
                     .onDisappear {
-                        if type == InteractionType.allCases.last && vm.stepCount >= 7000 {
+                        if type == InteractionType.allCases.last && sm.stepCount >= 7000 {
                             ispushed = true
                         }
                     }
@@ -83,25 +75,23 @@ struct MainView: View {
                 ToolbarItem(placement: .topBarLeading) {
                     Text("\(sm.stepCount)")
                         .font(Font.custom("Galmuri7", size: 16))
-                        .foregroundColor(vm.stepCount >= 10000 ? .black : .white)
+                        .foregroundColor(sm.stepCount >= 10000 ? .black : .white)
                 }
-                //TODO: 테스트 용으로 일단 기준 8000보로 낮춤;
-                if sm.stepCount >= 8000 && juiceButtonVisible {
+                
+                if sm.stepCount >= 10000 && juiceButtonVisible {
                     ToolbarItem(placement: .topBarTrailing) {
                         Button(action: {
                             cp.sendMessage(message: ["date": Date()])
                             
                             //TODO: 버튼 눌렀을 때 축하 애니메이션
-                            
-                            //TODO: 메인화면 사과 캐릭터에서 주스 캐릭터로 바뀌기
-                            
+                                                        
                             //만보 축하 애니메이션 지난 후에는 주스 버튼 사라지게 하기
                             juiceButtonVisible = false
                         }, label: {
                             Image(systemName: "takeoutbag.and.cup.and.straw.fill")
                         })
                     }
-
+                    
                 }
                 
                 ToolbarItem(placement: .bottomBar) {
@@ -122,7 +112,7 @@ struct MainView: View {
                 }
             }
             
-
+            
         }
     }
 }
