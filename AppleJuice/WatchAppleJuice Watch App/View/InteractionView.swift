@@ -17,11 +17,11 @@ struct InteractionView: View {
     }
     
     var body : some View {
-        VStack(spacing:0) {
+        VStack {
             Image(vm.currentFrame)
                 .resizable()
-                .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
+                .scaledToFill()
                 .animation(.linear(duration: 0.001), value: vm.currentFrame)
         }
         .toolbar{
