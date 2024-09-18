@@ -8,7 +8,7 @@ import Foundation
 import HealthKit
 
 class StepsManager: ObservableObject {
-    @Published var stepCount: Int = 7000
+    @Published var stepCount: Int = 0
 
     private var healthStore: HKHealthStore
     private var query: HKObserverQuery?

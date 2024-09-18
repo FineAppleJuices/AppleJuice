@@ -74,6 +74,7 @@ struct MainView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Text("\(sm.stepCount)")
+                        .frame(width: 100, alignment: .leading)
                         .font(Font.custom("Galmuri7", size: 16))
                         .foregroundColor(sm.stepCount >= 10000 ? .black : .white)
                 }
