@@ -61,7 +61,7 @@ class GoalHistoryViewModel: ObservableObject {
     }
     
     //앱을 기동한 날짜와 마지막으로 저장된 접속 날짜 사이에 있는 데이터들의 헬스킷을 한번 더 갱신
-    func refreshStepCounts() {
+    private func refreshStepCounts() {
         let from: Date = getLastLoginDate() ?? Date()
         let to: Date = Date()
 
