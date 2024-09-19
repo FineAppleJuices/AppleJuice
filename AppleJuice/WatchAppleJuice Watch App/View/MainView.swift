@@ -8,9 +8,10 @@ import SwiftUI
 
 struct MainView: View {
     @State private var path = NavigationPath()
-    @StateObject private var vm = MainViewModel()
+    @StateObject private var sm = StepsManager()
     @StateObject private var cp = ConnectivityProvider()
     @State private var currentIndex = 0
+    @State private var juiceButtonVisible = true
     @State var ispushed = false
     
     @StateObject private var viewModel = InteractionViewModel(frameNames: ["green1", "green2", "green3"], infinite: true)
@@ -20,7 +21,8 @@ struct MainView: View {
     var body: some View {
         NavigationStack(path: $path) {
             ZStack {
-                if vm.stepCount >= 10000 {
+                //걸음 수가 만보 이상일 때와 만보 이하일 때 배경화면이 바뀜
+                if sm.stepCount >= 10000 {
                     Image("watchbackground2")
                         .resizable()
                         .scaledToFill()
@@ -32,12 +34,13 @@ struct MainView: View {
                         .edgesIgnoringSafeArea(.all)
                 }
                 
-                if vm.stepCount > 10000 {
+                //걸음 수 만보 이상일때 캐릭터 움직임 애니메이션
+                if sm.stepCount > 10000 {
                     Image(clearModel.currentFrame)
                         .resizable()
                         .animation(.linear(duration: 0.001), value: clearModel.currentFrame)
                         .padding(.bottom, 8)
-                } else if vm.stepCount == 10000{
+                } else if sm.stepCount == 10000 {
                     Image("juiceclear")
                         .resizable()
                         .padding(.bottom, 8)
@@ -48,7 +51,7 @@ struct MainView: View {
                             .padding(.top, 15)
                         Spacer()
                     }
-                } else if vm.stepCount >= 7000 && ispushed == true {
+                } else if sm.stepCount >= 7000 && ispushed == true {
                     Image(seventhousandviewModel.currentFrame)
                         .resizable()
                         .animation(.linear(duration: 0.001), value: seventhousandviewModel.currentFrame)
@@ -63,24 +66,33 @@ struct MainView: View {
             .navigationDestination(for: InteractionType.self) { type in
                 InteractionView(interactionType: type, path: $path)
                     .onDisappear {
-                        if type == InteractionType.allCases.last && vm.stepCount >= 7000 {
+                        if type == InteractionType.allCases.last && sm.stepCount >= 7000 {
                             ispushed = true
                         }
                     }
             }
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Text("\(vm.stepCount)")
+                    Text("\(sm.stepCount)")
+                        .frame(width: 100, alignment: .leading)
                         .font(Font.custom("Galmuri7", size: 16))
-                        .foregroundColor(vm.stepCount >= 10000 ? .black : .white)
+                        .foregroundColor(sm.stepCount >= 10000 ? .black : .white)
                 }
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: {
-                        cp.sendMessage(message: ["date": Date().toString()])
-                        vm.stepCount += 1000
-                    }, label: {
-                        Image(systemName: "carrot.fill")
-                    })
+                
+                if sm.stepCount >= 10000 && juiceButtonVisible {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button(action: {
+                            cp.sendMessage(message: ["date": Date()])
+                            
+                            //TODO: 버튼 눌렀을 때 축하 애니메이션
+                                                        
+                            //만보 축하 애니메이션 지난 후에는 주스 버튼 사라지게 하기
+                            juiceButtonVisible = false
+                        }, label: {
+                            Image(systemName: "takeoutbag.and.cup.and.straw.fill")
+                        })
+                    }
+                    
                 }
                 
                 ToolbarItem(placement: .bottomBar) {
@@ -95,13 +107,13 @@ struct MainView: View {
                                     .frame(width: 40, height: 40)
                             })
                             .buttonStyle(PlainButtonStyle())
-                            .disabled(!(type.milestone...).contains(vm.stepCount))
+                            .disabled(!(type.milestone...).contains(sm.stepCount))
                         }
                     }
                 }
             }
             
-
+            
         }
     }
 }

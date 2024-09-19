@@ -28,7 +28,6 @@
 		AFB1DBDB2C2F0332008A6A2D /* InteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBDA2C2F0332008A6A2D /* InteractionView.swift */; };
 		AFB1DBE02C2F03A6008A6A2D /* InteractionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBDF2C2F03A6008A6A2D /* InteractionType.swift */; };
 		AFB1DBEB2C2FAB24008A6A2D /* InteractionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBEA2C2FAB24008A6A2D /* InteractionViewModel.swift */; };
-		AFB1DBED2C2FDAFC008A6A2D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBEC2C2FDAFC008A6A2D /* MainViewModel.swift */; };
 		AFB1DBF12C2FDEE2008A6A2D /* AppleJuice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBEF2C2FDEE1008A6A2D /* AppleJuice.xcdatamodeld */; };
 		AFB1DBF22C2FDEE2008A6A2D /* AppleJuice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBEF2C2FDEE1008A6A2D /* AppleJuice.xcdatamodeld */; };
 		AFB1DBF42C2FE019008A6A2D /* PersistentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DBF32C2FE019008A6A2D /* PersistentController.swift */; };
@@ -40,7 +39,6 @@
 		AFB1DC2E2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1DC2A2C32E6AD008A6A2D /* DailyStatusEntity+CoreDataProperties.swift */; };
 		D3B8E98E2C85E7B000A6B5C9 /* Galmuri7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3B8E98D2C85E7B000A6B5C9 /* Galmuri7.ttf */; };
 		D3B8E9912C85E80300A6B5C9 /* Galmuri7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3B8E9902C85E80300A6B5C9 /* Galmuri7.ttf */; };
-		EE3204522C567CDC009B9E3A /* WalkingLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3204512C567CDC009B9E3A /* WalkingLevel.swift */; };
 		EE3204542C5680C5009B9E3A /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3204532C5680C5009B9E3A /* BackgroundView.swift */; };
 		EEEC6BC12C567799006E4246 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEC6BC02C567799006E4246 /* Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -90,7 +88,6 @@
 		AFB1DBDA2C2F0332008A6A2D /* InteractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionView.swift; sourceTree = "<group>"; };
 		AFB1DBDF2C2F03A6008A6A2D /* InteractionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionType.swift; sourceTree = "<group>"; };
 		AFB1DBEA2C2FAB24008A6A2D /* InteractionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionViewModel.swift; sourceTree = "<group>"; };
-		AFB1DBEC2C2FDAFC008A6A2D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		AFB1DBF02C2FDEE1008A6A2D /* AppleJuice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppleJuice.xcdatamodel; sourceTree = "<group>"; };
 		AFB1DBF32C2FE019008A6A2D /* PersistentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentController.swift; sourceTree = "<group>"; };
 		AFB1DBF62C2FE0B3008A6A2D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -103,7 +100,6 @@
 		D3B8E9902C85E80300A6B5C9 /* Galmuri7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Galmuri7.ttf; sourceTree = "<group>"; };
 		EE008C782C4E759E009933CA /* WatchAppleJuice Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchAppleJuice Watch App.entitlements"; sourceTree = "<group>"; };
 		EE008C792C4E75AA009933CA /* AppleJuice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppleJuice.entitlements; sourceTree = "<group>"; };
-		EE3204512C567CDC009B9E3A /* WalkingLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingLevel.swift; sourceTree = "<group>"; };
 		EE3204532C5680C5009B9E3A /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		EEEC6BC02C567799006E4246 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -259,7 +255,6 @@
 			isa = PBXGroup;
 			children = (
 				AFB1DBDF2C2F03A6008A6A2D /* InteractionType.swift */,
-				EE3204512C567CDC009B9E3A /* WalkingLevel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -268,7 +263,6 @@
 			isa = PBXGroup;
 			children = (
 				AFB1DBEA2C2FAB24008A6A2D /* InteractionViewModel.swift */,
-				AFB1DBEC2C2FDAFC008A6A2D /* MainViewModel.swift */,
 				AF7215342C44D022007763C6 /* ConnectivityProvider.swift */,
 			);
 			path = ViewModel;
@@ -432,9 +426,7 @@
 				AFB1DB8A2C295987008A6A2D /* WatchAppleJuiceApp.swift in Sources */,
 				AFB1DBE02C2F03A6008A6A2D /* InteractionType.swift in Sources */,
 				EEEC6BC12C567799006E4246 /* Extensions.swift in Sources */,
-				EE3204522C567CDC009B9E3A /* WalkingLevel.swift in Sources */,
 				AFB1DBD72C2EF810008A6A2D /* StepsManager.swift in Sources */,
-				AFB1DBED2C2FDAFC008A6A2D /* MainViewModel.swift in Sources */,
 				AF7215352C44D022007763C6 /* ConnectivityProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

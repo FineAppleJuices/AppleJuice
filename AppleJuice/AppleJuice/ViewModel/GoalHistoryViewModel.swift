@@ -7,74 +7,21 @@
 
 import SwiftUI
 import HealthKit
-
-struct JuiceEntry: Identifiable, Equatable {
-    let id = UUID()
-    let date: Date
-    let steps: Int
-
-    static func == (lhs: JuiceEntry, rhs: JuiceEntry) -> Bool {
-        return lhs.id == rhs.id
-    }
-}
-//TODO: 테스트코드 주석 지우기
-
-//let sampleJuiceEntries: [JuiceEntry] = [
-//    JuiceEntry(date: Date(), steps: 3540),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -1, to: Date())!, steps: 4876),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -2, to: Date())!, steps: 6578),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -3, to: Date())!, steps: 7321),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -4, to: Date())!, steps: 8456),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -5, to: Date())!, steps: 5123),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -6, to: Date())!, steps: 3789),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -7, to: Date())!, steps: 9201),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -8, to: Date())!, steps: 6034),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -9, to: Date())!, steps: 4567),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -10, to: Date())!, steps: 7890),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -11, to: Date())!, steps: 9004),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -12, to: Date())!, steps: 5123),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -13, to: Date())!, steps: 6237),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -14, to: Date())!, steps: 7864),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -15, to: Date())!, steps: 4290),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -16, to: Date())!, steps: 8356),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -17, to: Date())!, steps: 6782),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -18, to: Date())!, steps: 8930),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -19, to: Date())!, steps: 4032),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -20, to: Date())!, steps: 7154),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -21, to: Date())!, steps: 6023),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -22, to: Date())!, steps: 7890),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -23, to: Date())!, steps: 5689),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -24, to: Date())!, steps: 9234),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -25, to: Date())!, steps: 8345),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -26, to: Date())!, steps: 4390),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -27, to: Date())!, steps: 6703),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -28, to: Date())!, steps: 7654),
-//    JuiceEntry(date: Calendar.current.date(byAdding: .day, value: -29, to: Date())!, steps: 9801)
-//]
-
-class GoalHistoryViewModel: ObservableObject {
     
-    @Published var statusList: [DailyStatus] = []
-    @Published var juiceEntries: [JuiceEntry] = []
+class GoalHistoryViewModel: ObservableObject {
     let coreDataManager = CoreDataManager.shared
+
+    @Published var statusList: [DailyStatus] = []
+    
     private var healthStore = HKHealthStore()
 
-//    init() {
-//        statusList = coreDataManager.fetchAllEntity()
-//        requestHealthAuthorization()
-//    }
-    
-    init(useSampleData: Bool = false) {
-        statusList = coreDataManager.fetchAllEntity()
+    init() {
+        //초기화 할때 한번씩 걸음수 갱신하기
+        refreshStepCounts()
+        statusList = coreDataManager.fetchEntities()
         requestHealthAuthorization()
-        
-        // TODO: 테스트 코드 주석 지우기 =
-//        if useSampleData {
-//            juiceEntries = sampleJuiceEntries
-//        }
     }
-    
-    
+        
     private func requestHealthAuthorization() {
         guard HKHealthStore.isHealthDataAvailable() else { return }
         let stepType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
@@ -87,11 +34,14 @@ class GoalHistoryViewModel: ObservableObject {
         }
     }
 
+    // CoreDate 에 새로운 데이터 추가하기
     func addJuiceEntry(date: Date, steps: Int) {
-        let newEntry = JuiceEntry(date: date, steps: steps)
-        juiceEntries.append(newEntry)
+        coreDataManager.createEntity(dailyStatus: DailyStatus(id: UUID().uuidString, date: date, steps: steps))
+        //리스트 갱신하기
+        statusList = coreDataManager.fetchEntities()
     }
 
+    // HealthKit에 해당 날짜로 쿼리를 보내 걸음 수를 받아오기
     func fetchSteps(for date: Date, completion: @escaping (Int) -> Void) {
         let stepType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
         let startDate = Calendar.current.startOfDay(for: date)
@@ -108,5 +58,23 @@ class GoalHistoryViewModel: ObservableObject {
             }
         }
         healthStore.execute(query)
+    }
+    
+    //앱을 기동한 날짜와 마지막으로 저장된 접속 날짜 사이에 있는 데이터들의 헬스킷을 한번 더 갱신
+    private func refreshStepCounts() {
+        let from: Date = getLastLoginDate() ?? Date()
+        let to: Date = Date()
+
+        let listToRefresh: [DailyStatus] = coreDataManager.fetchEntities(startDate: from, endDate: to)
+        
+        for data in listToRefresh {
+            var data = data
+            // 걸음 수를 비동기적으로 가져와서 데이터를 갱신
+            fetchSteps(for: data.date) { steps in
+                data.steps = steps
+                // 데이터를 업데이트한 후에 CoreData에 저장
+                self.coreDataManager.saveContext()
+            }
+        }
     }
 }
