@@ -25,13 +25,13 @@ struct MainView: View {
                 if sm.stepCount >= 10000 {
                     Image("watchbackground2")
                         .resizable()
-                        .scaledToFill()
                         .edgesIgnoringSafeArea(.all)
+                        .scaledToFill()
                 } else {
                     Image("watchbackground")
                         .resizable()
-                        .scaledToFill()
                         .edgesIgnoringSafeArea(.all)
+                        .scaledToFill()
                 }
                 
                 //걸음 수 만보 이상일때 캐릭터 움직임 애니메이션
@@ -45,10 +45,14 @@ struct MainView: View {
                         .resizable()
                         .padding(.bottom, 8)
                     VStack {
-                        Text("주스가 된 사과")
-                            .font(Font.custom("Galmuri7", size: 20))
-                            .foregroundColor(.black)
-                            .padding(.top, 15)
+                        HStack {
+                            Text("You made Apple Juice !")
+                                .font(Font.custom("Galmuri7", size: 11))
+                                .foregroundColor(.black)
+                                .padding(.top, 12)
+                                .padding(.leading, 8)
+                            Spacer()
+                        }
                         Spacer()
                     }
                 } else if sm.stepCount >= 7000 && ispushed == true {
@@ -62,6 +66,14 @@ struct MainView: View {
                         .animation(.linear(duration: 0.001), value: viewModel.currentFrame)
                         .padding(.bottom, 8)
                 }
+                
+//                // 시범용 버튼
+//                Button(action: {
+//                    sm.stepCount += 2000
+//                }, label: {
+//                    Text("push")
+//                })
+//                .frame(width: 80)
             }
             .navigationDestination(for: InteractionType.self) { type in
                 InteractionView(interactionType: type, path: $path)
@@ -96,7 +108,7 @@ struct MainView: View {
                 }
                 
                 ToolbarItem(placement: .bottomBar) {
-                    HStack(spacing: 20){
+                    HStack(spacing: 14){
                         ForEach(InteractionType.allCases) { type in
                             Button(action: {
                                 path.append(type)
@@ -104,7 +116,7 @@ struct MainView: View {
                                 Image("\(type.iconImage)")
                                     .resizable()
                                     .scaledToFit()
-                                    .frame(width: 40, height: 40)
+                                    .frame(width: 34, height: 34)
                             })
                             .buttonStyle(PlainButtonStyle())
                             .disabled(!(type.milestone...).contains(sm.stepCount))
@@ -112,7 +124,6 @@ struct MainView: View {
                     }
                 }
             }
-            
             
         }
     }
