@@ -17,25 +17,17 @@ struct InteractionView: View {
     }
     
     var body : some View {
-        VStack {
-            Image(vm.currentFrame)
-                .resizable()
-                .edgesIgnoringSafeArea(.all)
-                .scaledToFill()
-                .animation(.linear(duration: 0.001), value: vm.currentFrame)
-        }
-        .toolbar{
-            ToolbarItem(placement: .topBarTrailing) {
-                Rectangle()
-                    .opacity(0)
+        Image(vm.currentFrame)
+            .resizable()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .edgesIgnoringSafeArea(.all)
+            .animation(.linear(duration: 0.001), value: vm.currentFrame)
+            .onChange(of: vm.shouldNavigateBack) { oldValue, newValue in
+                if newValue {
+                    path.removeLast()
+                }
             }
-        }
-        .onChange(of: vm.shouldNavigateBack) { oldValue, newValue in
-            if newValue {
-                path.removeLast()
-            }
-        }
-        .navigationBarBackButtonHidden(true)
+            .navigationBarBackButtonHidden(true)
     }
 }
 
