@@ -23,6 +23,15 @@ class AppDelegate: NSObject, UIApplicationDelegate, WCSessionDelegate {
         return true
     }
     
+    func applicationWillResignActive(_ application: UIApplication) {
+        saveLastLoginDate() // 앱이 액티브 상태에서 나갈때 마지막 접속 날짜를 저장
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        saveLastLoginDate() // 앱이 백그라운드모드에 들어갈때 마지막 접속 날짜를 저장
+    }
+
+    
     // WCSession이 활성화 될때 호출되는 메서드, 세션 활성화 상태와 오류를 처리
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         if let error = error {
