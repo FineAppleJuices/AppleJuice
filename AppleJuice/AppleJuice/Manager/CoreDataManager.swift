@@ -36,7 +36,6 @@ class CoreDataManager {
         
         do{
             try mainContext.save()
-            
         } catch {
             print("Failed to save status: \(error)")
         }

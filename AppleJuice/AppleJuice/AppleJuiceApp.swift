@@ -13,8 +13,6 @@ struct AppleJuiceApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     init() {
-        saveLastLoginDate() // 앱 실행 시 호출
-        
     }
     
     var body: some Scene {
@@ -26,10 +24,7 @@ struct AppleJuiceApp: App {
 
 // 앱이 시작될 때 마지막 접속 일자를 저장
 func saveLastLoginDate() {
-    // 현재 날짜 가져오기
     let currentDate = Date()
-    
-    // 컴포넌트 설정
     let calendar = Calendar.current
     var components = calendar.dateComponents([.year, .month, .day], from: currentDate)
     components.hour = 0
