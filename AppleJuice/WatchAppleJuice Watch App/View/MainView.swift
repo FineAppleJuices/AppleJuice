@@ -14,6 +14,7 @@ struct MainView: View {
     @State private var currentIndex = 0
     @State private var juiceButtonVisible = false
     @State private var isAppleRed = false
+    @State private var isStepCountsOver7000 = false
     @State private var isStepCountsOver10000 = false
     @State private var isJuiceButtonPushed = false
     @State private var showCelebrationView = false
@@ -32,19 +33,19 @@ struct MainView: View {
                 backgroundImage
                 
                 if isJuiceButtonPushed {
-                    if showCelebrationView {
-                        celebrationView
-                    }
                     animatedClearView
                 } else if sm.stepCount >= 7000 && isAppleRed {
                     animatedRedView
                 } else {
                     animatedGreenView
                 }
-            }
-            .onChange(of: sm.stepCount) { newValue, oldValue in
-                if newValue >= 10000 && !isJuiceButtonPushed && !statusOfToday {
-                    juiceButtonVisible = true
+                
+                if showCelebrationView {
+                    Image(isJuiceButtonPushed ? "watchbackground2" : "watchbackground")
+                        .resizable()
+                        .edgesIgnoringSafeArea(.all)
+                        .scaledToFill()
+                    celebrationView
                 }
             }
             .navigationDestination(for: InteractionType.self) { type in
@@ -83,11 +84,10 @@ struct MainView: View {
                 .resizable()
                 .padding(.bottom, 8)
             HStack {
+                Spacer()
                 Text("You made Apple Juice !")
                     .font(Font.custom("Galmuri7", size: 11))
                     .foregroundColor(.black)
-                    .padding(.top, 12)
-                    .padding(.leading, 8)
                 Spacer()
             }
         }
@@ -117,43 +117,55 @@ struct MainView: View {
             Text("\(sm.stepCount)")
                 .frame(width: 100, alignment: .leading)
                 .font(Font.custom("Galmuri7", size: 16))
-                .foregroundColor(sm.stepCount >= 10000 ? .black : .white)
+                .foregroundColor(.white)
         }
     }
     
     private var juiceButtonToolbar: some ToolbarContent {
         ToolbarItem(placement: .topBarTrailing) {
-            if juiceButtonVisible {
-                Button(action: juiceButtonAction, label: {
+            if sm.stepCount>=10000 && isStepCountsOver7000 && !isJuiceButtonPushed && !juiceButtonVisible {
+                Button(action: {
+                    juiceButtonAction()
+                }, label: {
                     Image("clearbutton")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 34, height: 34)
                 })
+                .buttonStyle(PlainButtonStyle())
             }
         }
     }
     
     // 만보 달성 주스 버튼이 눌렸을 때의 액션들 모음
     private func juiceButtonAction() {
-        cp.sendMessage(message: ["date": Date()]) // Watch 에 오늘 날짜 보냄
+        cp.sendMessage(message: ["date": Date()]) // Watch 에서 오늘 날짜 보냄
         isStepCountsOver10000 = true // 10000보 달성 플래그
         juiceButtonVisible = false // 버튼 눌렀으니까 다시 안보이도록 변경
+        isJuiceButtonPushed = true // 주스 버튼 누름
         showCelebrationView = true // 축하 애니메이션 보이게 하기
         saveHistory() // UserDefaults 에 오늘 날짜 성공 이력 저장
     }
     
     private var interactionButtonsToolbar: some ToolbarContent {
-        ToolbarItem(placement: .bottomBar) {
-            HStack(spacing: 14) {
-                ForEach(InteractionType.allCases) { type in
-                    Button(action: {
-                        path.append(type)
-                    }, label: {
-                        Image("\(type.iconImage)")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 34, height: 34)
-                    })
-                    .buttonStyle(PlainButtonStyle())
-                    .disabled(!(type.milestone...).contains(sm.stepCount))
+            ToolbarItem(placement: .bottomBar) {
+                if !isJuiceButtonPushed {
+                HStack(spacing: 14) {
+                    ForEach(InteractionType.allCases) { type in
+                        Button(action: {
+                            path.append(type)                            
+                            if type == .sweet {
+                                isStepCountsOver7000 = true
+                            }
+                        }, label: {
+                            Image("\(type.iconImage)")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 34, height: 34)
+                        })
+                        .buttonStyle(PlainButtonStyle())
+                        .disabled(!(type.milestone...).contains(sm.stepCount))
+                    }
                 }
             }
         }
